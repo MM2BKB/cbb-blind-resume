@@ -55,7 +55,7 @@ body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
 .btn{transition:box-shadow .2s,background .2s,color .2s,transform .1s}
 .btn:hover{box-shadow:0 0 14px var(--glow-soft)}
 .btn:active{transform:scale(.97)}
-.h2h{margin-top:12px;margin-bottom:0}.h2h ul{margin:0;padding-left:20px}.h2h li{margin:2px 0}
+.h2h{margin-top:0;margin-bottom:12px}.h2h ul{margin:0;padding-left:20px}.h2h li{margin:2px 0}
 .btn.pick{box-shadow:0 0 12px var(--glow),0 0 28px var(--glow-soft)}
 .btn.pick:hover{box-shadow:0 0 18px var(--glow),0 0 40px var(--glow-soft)}
 .tri .head .sel{text-shadow:0 0 10px var(--glow)}
@@ -404,7 +404,7 @@ function renderCompare(){
   const k=cur.tier, T=cur.teams, n=votes.length, need=5, pool=tierPool(k), done=pool.filter(t=>playsT[k][t.id]>=NEED).length;
   let h=`<div class="progress"><span>${n} group${n===1?'':'s'} ranked</span><div class="bar"><i style="width:${Math.min(100,n/need*100)}%"></i></div><span>${n>=need?'Top 40 unlocked':'Top 40 unlocks at '+need}</span></div>
   <p class="pool">Comparing <b>all teams</b>, whatever their record · ${done} of ${pool.length} teams done</p>
-  <h2 class="q">Rank these three resumes</h2>
+  ${h2hBlock(T)}
   <div class="board tri">
    <div class="head"><div class="mid">RESUME</div>${T.map((t,i)=>{const pi=picks.indexOf(t.id);return `<div class="${pi>=0?'sel':''}">Team ${'ABC'[i]}<small>${t.code}${pi>=0?' · '+RANKS[pi]:''}</small></div>`;}).join('')}</div>`;
   GROUPS.forEach(gr=>{
@@ -413,7 +413,6 @@ function renderCompare(){
   });
   h+=`<div class="vote"><div></div>${T.map((t,i)=>{const pi=picks.indexOf(t.id);return pi>=0?`<button class="btn picked" disabled>${RANKS[pi]}</button>`:`<button class="btn pick" data-pick="${i}">Pick ${RANKS[picks.length]}</button>`;}).join('')}</div>
   <div class="flags"><div class="l">Team tools</div>${T.map(t=>`<div class="fl"><button class="mini ${boost.has(t.id)?'on':''}" data-act="boost" data-id="${t.id}">${boost.has(t.id)?'★ Boosted':'☆ Boost'}</button><button class="mini" data-act="drop" data-id="${t.id}">Don't consider</button></div>`).join('')}</div></div>
-  ${h2hBlock(T)}
   <p class="hint" style="margin-top:10px">Click the strongest resume first, then the second strongest. The last one ranks third. Boost gives a team a rating bonus. Don't consider removes it from your rankings.</p>
   <div class="tools"><button class="btn ghost" data-act="close">All three too close</button><button class="btn ghost" data-act="undo" ${(n||picks.length)?'':'disabled'}>${picks.length?'Clear my pick':'Undo last'}</button><button class="btn ghost" data-act="skip">Skip group</button><span class="hint">Keys: 1, 2, 3 pick Team A, B, C</span></div>`;
   $('view-compare').innerHTML=h;
