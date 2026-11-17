@@ -10,7 +10,7 @@
 <style>
 /* Layout idea: a scoreboard. Team A | metric | Team B, read straight across each row. */
 :root{
-  --bg:#ecdcc0; --court-line:#8a4b1f; --court-op:.22;
+  --bg:#ecdcc0; --court-line:#8a4b1f; --court-op:.28; --glow:rgba(217,72,15,.45); --glow-soft:rgba(217,72,15,.18);
   --panel:#ffffff;
   --ink:#0e1a2b;
   --muted:#5b6778;
@@ -25,13 +25,13 @@
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --bg:#0f1a2b; --court-line:#e8edf5; --court-op:.09; --panel:#121d2f; --ink:#e8edf5; --muted:#96a3b8; --line:#26354d;
+    --bg:#0f1a2b; --court-line:#e8edf5; --court-op:.16; --glow:rgba(255,122,61,.75); --glow-soft:rgba(255,122,61,.22); --panel:#121d2f; --ink:#e8edf5; --muted:#96a3b8; --line:#26354d;
     --accent:#ff7a3d; --accent-ink:#1a0c04; --soft:#17243a; --good:#4fd08a;
     color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
-  --bg:#0f1a2b; --court-line:#e8edf5; --court-op:.09; --panel:#121d2f; --ink:#e8edf5; --muted:#96a3b8; --line:#26354d;
+  --bg:#0f1a2b; --court-line:#e8edf5; --court-op:.16; --glow:rgba(255,122,61,.75); --glow-soft:rgba(255,122,61,.22); --panel:#121d2f; --ink:#e8edf5; --muted:#96a3b8; --line:#26354d;
   --accent:#ff7a3d; --accent-ink:#1a0c04; --soft:#17243a; --good:#4fd08a;
   color-scheme:dark;
 }
@@ -42,6 +42,23 @@ body{background:transparent}
 .court{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;color:var(--court-line);opacity:var(--court-op)}
 .court *{fill:none;stroke:currentColor;stroke-width:3;vector-effect:non-scaling-stroke}
 .court .hoop{stroke-width:4}
+
+/* glow */
+.court{filter:drop-shadow(0 0 5px var(--glow)) drop-shadow(0 0 14px var(--glow-soft));animation:courtPulse 6s ease-in-out infinite}
+@keyframes courtPulse{0%,100%{opacity:var(--court-op)}50%{opacity:calc(var(--court-op) * 1.55)}}
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(520px 380px at 8% 50%,var(--glow-soft),transparent 70%),radial-gradient(520px 380px at 92% 50%,var(--glow-soft),transparent 70%);
+  animation:hoopGlow 8s ease-in-out infinite alternate}
+@keyframes hoopGlow{from{opacity:.55}to{opacity:1}}
+.card,.tri,.board{transition:box-shadow .25s,border-color .25s}
+.card:hover{border-color:var(--accent);box-shadow:0 0 0 1px var(--glow-soft),0 0 22px var(--glow-soft)}
+.btn{transition:box-shadow .2s,background .2s,color .2s,transform .1s}
+.btn:hover{box-shadow:0 0 14px var(--glow-soft)}
+.btn:active{transform:scale(.97)}
+.btn.pick{box-shadow:0 0 12px var(--glow),0 0 28px var(--glow-soft)}
+.btn.pick:hover{box-shadow:0 0 18px var(--glow),0 0 40px var(--glow-soft)}
+.tri .head .sel{text-shadow:0 0 10px var(--glow)}
+@media (prefers-reduced-motion:reduce){.court,body::after{animation:none}}
 
 .wrap{max-width:860px;margin:0 auto;padding:20px 16px 48px}
 header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:16px}
