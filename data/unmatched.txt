@@ -31,6 +31,7 @@ Coastal Georgia
 Colgate
 Coppin State
 Dartmouth
+DeSales
 Delaware
 Delaware State
 Denver
@@ -41,6 +42,7 @@ Drexel
 Earlham
 East Carolina
 Eastern Illinois
+Eastern Kentucky
 Ecclesia
 Emmanuel (MA)
 Evansville
@@ -49,9 +51,11 @@ Ferrum
 Fisk
 Florida A&M
 Florida Gulf Coast
+Florida Memorial
 Fresno State
 Gardner-Webb
 Georgia State
+Grambling
 Hampton
 Holy Cross
 IU Indianapolis
@@ -59,7 +63,9 @@ Idaho State
 Indiana State
 Iona
 Jackson State
+Jacksonville
 Jacksonville State
+Kent State
 LSU New Orleans
 La Salle
 Lafayette
@@ -67,6 +73,7 @@ Le Moyne
 Lincoln (CA)
 Lipscomb
 Little Rock
+Long Island University
 Longwood
 Louisiana Tech
 Loyola Maryland
@@ -127,6 +134,7 @@ Southern Indiana
 Southern New Orleans
 Southern Utah
 St. Thomas
+Stetson
 Stillman
 Stonehill
 Tennessee Tech
