@@ -2,6 +2,7 @@ Abraham Baldwin Agricultural
 Air Force
 Alabama A&M
 Alabama State
+Alcorn State
 American University
 Arkansas State
 Arkansas-Pine Bluff
@@ -88,6 +89,7 @@ Nicholls
 Norfolk State
 North Alabama
 North Carolina A&T
+North Carolina Central
 North Dakota
 North Dakota State
 North Florida
@@ -102,6 +104,7 @@ Old Dominion
 Oral Roberts
 Plattsburgh
 Portland State
+Prairie View A&M
 Princeton
 Purdue Fort Wayne
 Queens University
@@ -144,6 +147,7 @@ UTEP
 UTSA
 Utah Tech
 Vermont
+Virginia Lynchburg
 Washington State
 Weber State
 West Georgia
