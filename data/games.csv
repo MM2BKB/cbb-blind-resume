@@ -1,485 +1,504 @@
 date,team,opp,ts,os,id
-,College of Biblical Studies,McNeese St.,87,135,
-,Louisville,Memphis,78,98,
-,Boise St.,Nebraska,75,102,
-,Harvard,American University,64,70,
-,Niagara,Iowa St.,45,66,
-,New Hampshire,Boston College,55,67,
-,Montana St.,BYU,71,86,
-,Kansas City,George Mason,68,76,
-,Mercyhurst,Penn St.,57,72,
-,Tennessee Tech,Indiana,66,90,
-,Western Michigan,Purdue Fort Wayne,81,59,
-,LaGrange,Kennesaw St.,54,107,
-,Stetson,Howard,62,75,
-,Mercer,West Virginia,61,75,
-,Loyola Maryland,Towson,60,90,
-,Southern Utah,High Point,59,88,
-,Maryland Eastern Shore,Rhode Island,47,67,
-,Niagara,Bowling Green,76,88,
-,Oklahoma St.,Texas A&M,69,88,
-,Loyola Marymount,South Alabama,72,79,
-,Southern,Minnesota,61,91,
-,Richmond,Southern Illinois,70,80,
-,Merrimack,Florida,54,83,
-,SIU Edwardsville,Duke,47,90,
-,Sam Houston St.,Illinois,86,108,
-,Ohio St.,Connecticut,68,84,
-,Northern Iowa,Michigan St.,72,106,
-,Virginia,Maryland,87,83,
-,Tennessee State,Tennessee,78,83,
-,Arizona,Auburn,80,69,
-,North Alabama,Miami FL,52,94,
-,Seton Hall,Alabama,76,82,
-,Central Arkansas,Arkansas,66,79,
-,Prairie View A&M,Vanderbilt,62,89,
-,Northern Arizona,Kentucky,77,78,
-,Texas A&M-Corpus Christi,Florida St.,60,84,
-,Bryant,Rutgers,51,72,
-,Georgetown,Clemson,85,78,
-,Pittsburgh,Butler,76,64,
-,Ohio,Purdue,62,80,
-,App State,Charlotte,66,60,
-,Mount St. Mary's,Virginia Tech,62,82,
-,Troy,N.C. State,62,81,
-,Harvard,George Washington,57,85,
-,Long Island University,Fordham,58,80,
-,Georgia,North Carolina,78,70,
-,South Dakota,Drake,72,81,
-,North Carolina Central,Liberty,66,74,
-,Southeast Missouri State,Middle Tennessee,75,88,
-,Southern Miss,Texas St.,65,85,
-,Texas Southern,Murray St.,78,99,
-,Illinois St.,North Dakota State,81,82,
-,Wright St.,Samford,90,66,
-,Georgia Southern,UCF,70,84,
-,Milwaukee,TCU,64,76,
-,Fairleigh Dickinson,Oklahoma,58,74,
-,Stanford,UNLV,68,76,
-,UL Monroe,Arizona St.,62,92,
-,Ball State,SMU,65,90,
-,DePaul,Northwestern,67,47,
-,Xavier,Mississippi St.,81,63,
-,Mississippi Valley State,Oregon St.,65,81,
-,Chicago State,San Diego,67,87,
-,UC San Diego,Utah St.,82,120,
-,Illinois Chicago,Saint Mary's,61,84,
-,LSU,Gonzaga,81,80,
-,Stonehill,Texas Tech,37,88,
-,Tulane,Akron,63,65,
-,George Mason,Bradley,61,62,
-,Loyola Chicago,Colorado St.,73,58,
-,Coastal Georgia,Florida Atlantic,63,78,
-,Rice,Stephen F. Austin,81,78,
-,Coppin State,South Florida,63,73,
-,Gardner-Webb,South Carolina,62,79,
-,Miami OH,Evansville,86,78,
-,Wyoming,Denver,76,53,
-,Montreat,UNC Wilmington,41,100,
-,UNC Asheville,Georgia Tech,74,75,
-,Lafayette,St. Bonaventure,58,81,
-,Southern Utah,Wake Forest,51,89,
-,Northern Iowa,Oakland,76,80,
-,Utah Tech,California,73,79,
-,South Alabama,North Texas,65,66,
-,Colorado,Providence,53,67,
-,Penn,Saint Joseph's,77,83,
-,Howard,Davidson,64,58,
-,Rider,Villanova,62,99,
-,UAB,Jacksonville State,68,71,
-,Austin Peay,Wichita St.,60,76,
-,UMBC,Towson,42,68,
-,Binghamton,Duquesne,58,71,
-,Cincinnati,Dayton,95,72,
-,UL Monroe,Grand Canyon,52,88,
-,Furman,Belmont,62,72,
-,New Mexico,Santa Clara,85,90,
-,Utah Valley,Nevada,73,71,
-,Marshall,Ohio St.,74,84,
-,Howard,Penn,65,78,
-,Syracuse,Indiana,80,83,
-,Muskingum,Akron,64,112,
-,UNC Greensboro,Illinois Chicago,72,82,
-,Eastern Illinois,Notre Dame,70,94,
-,Long Island University,Towson,46,66,
-,North Dakota,Clemson,77,92,
-,Minnesota,Cincinnati,63,61,
-,Cleveland State,Bowling Green,79,95,
-,Florida Gulf Coast,Georgia,72,80,
-,Florida A&M,UAB,64,92,
-,Jackson State,Mississippi St.,57,98,
-,SIU Edwardsville,Missouri,58,96,
-,Louisiana Tech,LSU,50,90,
-,Boston University,Northwestern,55,72,
-,UL Monroe,Texas A&M,67,108,
-,North Alabama,Oklahoma,72,81,
-,Illinois St.,Purdue,59,76,
-,Seton Hall,Charlotte,68,62,
-,App State,Auburn,53,75,
-,Alabama A&M,DePaul,47,84,
-,Eastern Washington,Oregon St.,84,94,
-,Mississippi Valley State,Washington,64,77,
-,Rice,Stanford,73,91,
-,Portland,Hawaii,73,66,
-,Florida,Florida St.,81,72,
-,Michigan St.,Duke,79,73,
-,Illinois,Texas Tech,78,84,
-,Bucknell,Virginia,61,95,
-,Northern Arizona,Arizona,59,90,
-,Kansas,Kentucky,89,69,
-,Memphis,Vanderbilt,81,105,
-,Queens University,BYU,82,98,
-,NJIT,Rutgers,64,101,
-,Delaware State,Georgetown,78,83,
-,Wright St.,Toledo,76,68,
-,Washington State,Duquesne,71,72,
-,Bradley,Davidson,45,62,
-,Winthrop,Kennesaw St.,79,88,
-,La Salle,Villanova,59,80,
-,South Alabama,UCF,69,76,
-,Virginia Tech,Iowa,93,88,
-,Harvard,Northeastern,70,74,
-,Eastern Kentucky,Georgia Tech,71,85,
-,Maine,Rhode Island,65,71,
-,Presbyterian,N.C. State,60,94,
-,Loyola Marymount,Troy,69,74,
-,Wyoming,North Carolina,63,76,
-,Elon,George Washington,50,69,
-,Iona,Fordham,72,78,
-,Siena,Dayton,99,89,
-,Charleston Southern,Wake Forest,64,82,
-,Maryland Eastern Shore,Boston College,54,82,
-,Detroit Mercy,Xavier,55,100,
-,Bryant,Providence,55,78,
-,Evansville,Middle Tennessee,68,73,
-,Texas St.,UT Rio Grande Valley,72,65,
-,Green Bay,Northern Iowa,76,89,
-,Alcorn State,Murray St.,57,94,
-,Belmont,Lipscomb,75,88,
-,Prairie View A&M,SMU,63,98,
-,Northern Kentucky,Saint Louis,63,125,
-,Southern,Iowa St.,47,84,
-,Yale,Baylor,61,90,
-,Fairfield,Wisconsin,42,89,
-,SE Louisiana,Mississippi,51,91,
-,Utah Tech,Utah St.,86,118,
-,Little Rock,New Mexico,69,94,
-,Hofstra,Arizona St.,63,85,
-,Weber State,Utah,64,85,
-,UL Monroe,TCU,92,100,
-,San Diego,Colorado,75,83,
-,Creighton,Kansas St.,82,89,
-,Jacksonville State,Houston,46,92,
-,Arkansas-Pine Bluff,UCLA,37,106,
-,Colgate,St. John's,59,90,
-,Robert Morris,Arkansas,53,76,
-,Marquette,Michigan,70,84,
-,USC,California,77,65,
-,Lindenwood,Nebraska,60,94,
-,South Florida,Saint Joseph's,80,83,
-,Loyola Chicago,Air Force,93,107,
-,Bethune-Cookman,San Diego St.,75,88,
-,Penn,Navy,76,81,
-,Charleston,Temple,91,81,
-,Kent State,UNC Wilmington,73,91,
-,South Carolina State,Notre Dame,59,99,
-,Saint Peter's,South Carolina,41,77,
-,Furman,Holy Cross,80,67,
-,James Madison,Delaware,71,61,
-,NJIT,VCU,49,87,
-,William & Mary,Florida Atlantic,90,95,
-,Cornell,St. Bonaventure,64,88,
-,Campbellsville,Western Kentucky,51,78,
-,Pepperdine,Sam Houston St.,77,85,
-,Friends,Wichita St.,60,113,
-,Valparaiso,South Dakota State,69,81,
-,Oral Roberts,Tulsa,71,80,
-,Stephen F. Austin,Abilene Christian,76,71,
-,Santa Clara,North Texas,76,71,
-,Oakland,Boise St.,79,111,
-,Portland State,Colorado St.,71,87,
-,Nevada,UC Santa Barbara,63,76,
-,Cal Poly,Grand Canyon,71,99,
-,Lincoln (CA),UC Irvine,40,90,
-,Mississippi Valley State,Oregon,66,100,
-,Pacific,Long Beach State,59,62,
-,UTSA,Seattle,86,59,
-,Morehead State,Louisville,57,107,
-,New Mexico State,Gonzaga,68,109,
-,Boyce,Liberty,54,113,
-,UNC Wilmington,East Carolina,78,75,
-,Long Beach State,Montana St.,70,83,
-,VCU,Memphis,88,89,
-,Howard Payne,Sam Houston St.,59,102,
-,San Diego St.,Colorado,77,66,
-,Omaha,Utah St.,56,90,
-,Oakland,UC Santa Barbara,67,90,
-,Samford,UNLV,79,88,
-,Lafayette,Saint Joseph's,57,67,
-,Monmouth,Rhode Island,66,84,
-,Northern Iowa,Furman,83,98,
-,Washington State,High Point,71,83,
-,Bellarmine,Miami OH,73,80,
-,Hampton,George Washington,61,75,
-,Northern Arizona,New Mexico,65,94,
-,Mercer,Davidson,76,88,
-,St. Bonaventure,Canisius,88,49,
-,Northern Illinois,Dayton,81,76,
-,Providence,Nebraska,58,67,
-,Central State,Duquesne,58,68,
-,Maryland,Georgetown,74,86,
-,Northwestern State,Murray St.,71,93,
-,Pacific,Bradley,63,52,
-,Bethune-Cookman,Grand Canyon,81,99,
-,Utah Valley,Weber State,101,93,
-,Fresno State,UC San Diego,65,81,
-,Sacramento State,Santa Clara,77,83,
-,Portland State,Seattle,60,79,
-,San José State,UC Irvine,79,91,
-,Arkansas,Virginia,72,91,
-,California,Houston,68,86,
-,Iona,St. John's,65,104,
-,Wichita St.,USC,86,93,
-,Southeast Missouri State,South Carolina,68,78,
-,Campbell,Western Michigan,71,87,
-,Harvard,Chicago,63,47,
-,Butler,Boise St.,81,100,
-,Southern,Drake,68,75,
-,Western Kentucky,Tennessee Tech,94,97,
-,Saint Mary's,Nevada,95,96,
-,Richmond,Temple,79,53,
-,Pittsburgh,Penn St.,82,76,
-,UT Arlington,Hawaii,62,71,
-,Wagner,Connecticut,41,83,
-,Grambling,Texas,62,93,
-,Radford,Tennessee,47,70,
-,North Florida,Miami FL,51,89,
-,Oakland,Alabama,68,109,
-,Connecticut,Michigan,85,77,
-,Northeastern,Virginia,72,97,
-,Wagner,Miami FL,57,83,
-,Middle Tennessee,Kansas,45,89,
-,Southern Miss,Iowa St.,57,83,
-,Arkansas State,Alabama,86,101,
-,North Florida,UCLA,63,114,
-,James Madison,Kentucky,80,89,
-,Omaha,BYU,67,108,
-,Massachusetts,Boston College,55,71,
-,Arkansas-Pine Bluff,Baylor,53,109,
-,Eastern Washington,Oregon,71,98,
-,Valparaiso,Purdue,83,80,
-,Youngstown State,Ohio St.,65,89,
-,Newberry,Charleston,66,112,
-,New Haven,Rutgers,54,81,
-,Stetson,West Virginia,53,91,
-,Yale,UCF,75,87,
-,Holy Cross,Villanova,66,95,
-,Georgia Southern,Georgia Tech,83,95,
-,Coppin State,George Mason,51,68,
-,East Tennessee State,N.C. State,63,77,
-,Austin Peay,Kennesaw St.,69,71,
-,Wofford,North Carolina,70,109,
-,American University,Clemson,73,82,
-,Saint Louis,Missouri,90,84,
-,Troy,Florida St.,68,91,
-,Eastern Michigan,Xavier,53,76,
-,Presbyterian,Georgia,77,91,
-,Texas Lutheran,Stephen F. Austin,32,89,
-,Florida Atlantic,Wright St.,71,97,
-,Delaware,Wisconsin,64,73,
-,Nicholls,UAB,63,70,
-,Robert Morris,Illinois Chicago,56,79,
-,Texas Southern,LSU,51,92,
-,Northern Kentucky,Texas A&M,67,104,
-,Stony Brook,Northwestern,65,78,
-,Southern,TCU,54,106,
-,St. Thomas,Minnesota,62,76,
-,Detroit Mercy,Marquette,32,93,
-,Mississippi Valley State,Oklahoma,57,84,
-,Idaho State,Wyoming,62,93,
-,Eastern Illinois,Iowa,47,91,
-,Central Arkansas,Mississippi,60,92,
-,Idaho,Colorado St.,67,78,
-,Northern Colorado,Arizona St.,63,90,
-,Queens University,Oklahoma St.,68,118,
-,Cal State Northridge,Kansas St.,78,95,
-,California Baptist,Oregon St.,68,96,
-,Tarleton State,San Diego,90,96,
-,Oakland,Stanford,63,81,
-,Lincoln (CA),Loyola Marymount,50,102,
-,Bethesda,Hawaii,44,116,
-,Jacksonville,Florida,57,88,
-,Coastal Carolina,Duke,52,113,
-,Penn,Illinois,70,112,
-,Cal Poly,Arizona,84,104,
-,Toledo,Michigan St.,61,91,
-,Gardner-Webb,Texas,50,98,
-,Bethune-Cookman,Texas Tech,58,76,
-,Wake Forest,Vanderbilt,51,74,
-,McNeese St.,North Texas,67,77,
-,Chattanooga,Penn St.,93,97,
-,Bellarmine,Indiana,69,92,
-,Long Island University,Seton Hall,60,67,
-,Howard Payne,Texas St.,66,135,
-,Kalamazoo,Western Michigan,52,99,
-,Southern Virginia,Richmond,46,107,
-,Georgia State,Charlotte,67,77,
-,Howard,Alcorn State,94,83,
-,Green Bay,Cincinnati,64,81,
-,Mercer,Virginia Tech,67,96,
-,Mercyhurst,Notre Dame,56,83,
-,Central Connecticut,Syracuse,49,102,
-,Buffalo,Pittsburgh,61,80,
-,Kentucky Wesleyan,Western Kentucky,48,82,
-,Centre,Belmont,45,75,
-,Stonehill,Fordham,63,83,
-,Northwestern State,Mississippi St.,44,82,
-,Central State,Illinois St.,55,100,
-,Northern Illinois,Tulsa,75,94,
-,VMI,SMU,70,95,
-,West Georgia,Loyola Chicago,53,76,
-,Le Moyne,Creighton,55,83,
-,South Florida,DePaul,80,82,
-,Towson,Utah,57,67,
-,Wofford,Tennessee,59,90,
-,Drexel,Virginia,60,89,
-,Arkansas-Pine Bluff,Arkansas,61,106,
-,Sam Houston St.,Alabama,74,96,
-,Manhattan,Kentucky,57,85,
-,Purdue Fort Wayne,Duquesne,71,78,
-,Stetson,South Carolina,55,81,
-,Coppin State,Virginia Tech,54,88,
-,Hampton,Georgia Tech,55,75,
-,Holy Cross,Rhode Island,59,103,
-,Wagner,Boston College,50,76,
-,Cornell (IA),Northern Iowa,70,106,
-,LSU New Orleans,LSU,57,100,
-,Cleveland State,Missouri,50,111,
-,Alabama State,Texas A&M,66,97,
-,Lipscomb,Iowa,54,76,
-,South Dakota State,Kansas St.,68,66,
-,Regis University,Wyoming,48,95,
-,Chapman,UC Irvine,66,92,
-,Northern Arizona,UNLV,77,89,
-,Cal State Fullerton,San Diego St.,78,102,
-,Bethesda,Pacific,47,102,
-,Maryland Eastern Shore,High Point,49,63,
-,Longwood,Saint Joseph's,73,82,
-,Fairleigh Dickinson,Butler,65,99,
-,Central College,Drake,48,101,
-,Bob Jones,Furman,52,121,
-,Cal State Northridge,Wichita St.,67,79,
-,SE Louisiana,Auburn,59,92,
-,West Coast Baptist,Boise St.,53,132,
-,Radford,California,70,84,
-,Queens University,Loyola Marymount,96,95,
-,Milwaukee,Santa Clara,72,95,
-,North Dakota State,Saint Mary's,64,105,
-,Western Illinois,Valparaiso,58,80,
-,Ottawa (KS),Tulsa,50,98,
-,Texas A&M-Corpus Christi,Texas St.,55,67,
-,Furman,Bethune-Cookman,79,70,
-,Binghamton,Northwestern,60,86,
-,Western Colorado,Utah Valley,63,84,
-,Lindenwood,TCU,59,98,
-,Southern,SMU,72,85,
-,Adams State,California,86,115,
-,Lehigh,Saint Louis,67,92,
-,The Citadel,Loyola Chicago,52,77,
-,Akron,Louisiana,75,61,
-,Maryland Eastern Shore,Wake Forest,62,83,
-,West Georgia,DePaul,58,75,
-,Kansas City,Creighton,61,76,
-,East Texas A&M,Oklahoma,68,64,
-,Alcorn State,Mississippi,58,99,
-,San Francisco State,UC Santa Barbara,55,85,
-,Davidson,Washington State,76,61,
-,Utah Tech,New Mexico,60,100,
-,Long Beach State,Utah,63,66,
-,Incarnate Word,Oklahoma St.,60,91,
-,North Dakota,Minnesota,50,85,
-,Texas Southern,Grand Canyon,79,103,
-,Abilene Christian,Colorado,59,94,
-,Southwestern Christian U,North Texas,50,122,
-,Florida St.,Florida A&M,113,69,
-,Weber State,Oregon St.,61,102,
-,Idaho State,Utah St.,58,94,
-,Biola,San Diego,62,79,
-,Northwestern State,Baylor,65,87,
-,Montana St.,Colorado St.,74,84,
-,Montana,Oregon,69,87,
-,East Tennessee State,Arizona St.,65,75,
-,Colgate,Washington,76,90,
-,Eastern Washington,Stanford,65,74,
-,Whittier,UC San Diego,75,100,
-,Towson,Santa Clara,70,89,
-,Illinois St.,Saint Mary's,85,90,
-,Robert Morris,Nevada,49,86,
-,Seattle,Hawaii,73,74,
-,Notre Dame,Villanova,74,72,
-,Liberty,High Point,57,72,
-,Niagara,West Virginia,46,91,
-,Florida Gulf Coast,UCF,95,96,
-,MIT,Harvard,45,73,
-,Little Rock,VCU,72,82,
-,Long Island University,Florida Atlantic,60,74,
-,Stetson,Clemson,72,85,
-,Bucknell,Maryland,67,96,
-,Eastern Illinois,Indiana,57,91,
-,Western Carolina,North Carolina,72,80,
-,American University,Cincinnati,53,79,
-,Air Force,Wright St.,71,102,
-,Youngstown State,St. Bonaventure,79,71,
-,UNC Asheville,Richmond,77,100,
-,NJIT,Dayton,58,89,
-,Miami OH,James Madison,86,77,
-,Western Michigan,Old Dominion,49,61,
-,New Haven,Syracuse,58,74,
-,Rider,Pittsburgh,57,95,
-,Mount St. Mary's,Xavier,52,97,
-,Maine,Providence,56,83,
-,Lafayette,Butler,60,96,
-,Southern Wesleyan,Charleston,55,111,
-,Lyon,Stephen F. Austin,61,120,
-,Morehead State,Western Kentucky,58,83,
-,Denver,Wisconsin,68,75,
-,Saint Peter's,Seton Hall,42,66,
-,Southern Indiana,Belmont,54,72,
-,Le Moyne,Nebraska,64,106,
-,Campbell,N.C. State,64,83,
-,Canisius,Penn St.,57,97,
-,Navy,George Washington,39,91,
-,Mercyhurst,Marquette,43,78,
-,Tennessee Tech,Mississippi St.,88,106,
-,North Carolina Central,Georgia,62,78,
-,Charleston Southern,South Florida,71,98,
-,Fisk,Middle Tennessee,73,117,
-,Murray St.,Tennessee State,94,64,
-,UMBC,George Mason,54,82,
-,St. Francis (IL),Illinois Chicago,47,96,
-,UAB,McNeese St.,78,99,
-,Bowling Green,Georgia State,76,73,
-,Central Connecticut,Temple,56,68,
-,Loyola Maryland,Georgetown,58,80,
-,Mount Olive,UNC Wilmington,65,101,
-,Midway,Kennesaw St.,57,116,
-,Charlotte,Indiana State,78,70,
-,Howard,Yale,62,72,
-,Miami FL,Florida,67,77,
-,Army,Duke,50,84,
-,Fairleigh Dickinson,Illinois,45,120,
-,Gardner-Webb,Connecticut,46,86,
-,Arizona,UCLA,75,84,
-,Quinnipiac,Michigan St.,59,96,
-,Chicago State,Texas,59,109,
-,La Salle,Houston,55,94,
-,Chattanooga,Louisville,70,84,
-,Monmouth,St. John's,63,78,
-,Purdue,Gonzaga,72,78,
-,Oakland,Michigan,68,84,
-,Fordham,Kansas,65,95,
-,Memphis,Iowa St.,80,76,
-,Jackson State,Texas Tech,42,76,
-,Milwaukee,USC,63,95,
-,Bellarmine,Vanderbilt,47,93,
-,Ohio St.,BYU,83,94,
+2026-11-02,Butler,Lafayette,96,60,401902275
+2026-11-02,Florida,Miami FL,77,67,401906769
+2026-11-02,Georgia,North Carolina Central,78,62,401906779
+2026-11-02,Mississippi St.,Tennessee Tech,106,88,401906791
+2026-11-02,Oklahoma,East Texas A&M,64,68,401906801
+2026-11-02,Texas,Chicago State,109,59,401906863
+2026-11-02,Creighton,Kansas City,76,61,401909490
+2026-11-02,DePaul,West Georgia,75,58,401909500
+2026-11-02,Marquette,Mercyhurst,78,43,401909522
+2026-11-02,Providence,Maine,83,56,401909531
+2026-11-02,Xavier,Mount St. Mary's,97,52,401909541
+2026-11-02,Duke,Army,84,50,401909562
+2026-11-02,Florida A&M,Florida St.,69,113,401909694
+2026-11-02,Pittsburgh,Rider,95,57,401909705
+2026-11-02,Syracuse,New Haven,74,58,401909716
+2026-11-02,Wake Forest,Maryland Eastern Shore,83,62,401909725
+2026-11-02,UCLA,Arizona,84,75,401909738
+2026-11-02,Baylor,Northwestern State,87,65,401909750
+2026-11-02,Colorado,Abilene Christian,94,59,401909759
+2026-11-02,Iowa St.,Memphis,76,80,401909771
+2026-11-02,Kansas,Fordham,95,65,401909784
+2026-11-02,Louisiana,Akron,61,75,401910993
+2026-11-02,Georgia State,Bowling Green,73,76,401910994
+2026-11-02,Old Dominion,Western Michigan,61,49,401910997
+2026-11-02,James Madison,Miami OH,77,86,401911002
+2026-11-02,Dayton,NJIT,89,58,401911185
+2026-11-02,George Washington,Navy,91,39,401911208
+2026-11-02,Loyola Chicago,The Citadel,77,52,401911228
+2026-11-02,Richmond,UNC Asheville,100,77,401911237
+2026-11-02,Saint Louis,Lehigh,92,67,401911248
+2026-11-02,St. Bonaventure,Youngstown State,71,79,401911261
+2026-11-02,Wright St.,Air Force,102,71,401911333
+2026-11-02,South Florida,Charleston Southern,98,71,401911374
+2026-11-02,Grand Canyon,Texas Southern,103,79,401911389
+2026-11-02,Connecticut,Gardner-Webb,86,46,401911390
+2026-11-02,Nevada,Robert Morris,86,49,401911452
+2026-11-02,Tennessee State,Murray St.,64,94,401911707
+2026-11-02,Cincinnati,American University,79,53,401912207
+2026-11-02,North Carolina,Western Carolina,80,72,401913099
+2026-11-02,Illinois,Fairleigh Dickinson,120,45,401913525
+2026-11-02,Indiana,Eastern Illinois,91,57,401916286
+2026-11-02,Maryland,Bucknell,96,67,401916296
+2026-11-02,Minnesota,North Dakota,85,50,401916303
+2026-11-02,BYU,Ohio St.,94,83,401916313
+2026-11-02,Penn St.,Canisius,97,57,401917173
+2026-11-02,Hawaii,Seattle,74,73,401917506
+2026-11-02,Saint Mary's,Illinois St.,90,85,401917507
+2026-11-02,San Diego,Biola,79,62,401917508
+2026-11-02,Santa Clara,Towson,89,70,401917509
+2026-11-02,California,Adams State,115,86,401918051
+2026-11-02,Clemson,Stetson,85,72,401918073
+2026-11-02,Louisville,Chattanooga,84,70,401918947
+2026-11-02,N.C. State,Campbell,83,64,401918955
+2026-11-02,SMU,Southern,85,72,401918967
+2026-11-02,McNeese,UAB,99,78,401919014
+2026-11-02,Oklahoma St.,Incarnate Word,91,60,401919039
+2026-11-02,TCU,Lindenwood,98,59,401919047
+2026-11-02,Nebraska,Le Moyne,106,64,401919780
+2026-11-02,Florida Atlantic,Long Island University,74,60,401919803
+2026-11-02,George Mason,UMBC,82,54,401920071
+2026-11-02,VCU,Little Rock,82,72,401920201
+2026-11-02,Harvard,MIT,73,45,401920354
+2026-11-02,UC San Diego,Whittier,100,75,401920370
+2026-11-02,Utah Valley,Western Colorado,84,63,401920434
+2026-11-02,St. John's,Monmouth,78,63,401920679
+2026-11-02,Stanford,Eastern Washington,74,65,401920716
+2026-11-02,Northwestern,Binghamton,86,60,401920732
+2026-11-02,Belmont,Southern Indiana,72,54,401920758
+2026-11-02,Washington,Colgate,90,76,401920769
+2026-11-02,Seton Hall,Saint Peter's,66,42,401920886
+2026-11-02,Wisconsin,Denver,75,68,401920893
+2026-11-02,Western Kentucky,Morehead State,83,58,401920959
+2026-11-02,Texas Tech,Jackson State,76,42,401921036
+2026-11-02,Vanderbilt,Bellarmine,93,47,401921104
+2026-11-02,Georgetown,Loyola Maryland,80,58,401921264
+2026-11-02,Bethune-Cookman,Furman,70,79,401921424
+2026-11-02,Utah,Long Beach State,66,63,401921697
+2026-11-02,Gonzaga,Purdue,78,72,401921704
+2026-11-02,Arizona St.,East Tennessee State,75,65,401921731
+2026-11-02,UCF,Florida Gulf Coast,96,95,401921753
+2026-11-02,West Virginia,Niagara,91,46,401921766
+2026-11-02,Utah St.,Idaho State,94,58,401922020
+2026-11-02,Oregon,Montana,87,69,401922029
+2026-11-02,Yale,Howard,72,62,401924743
+2026-11-02,Michigan St.,Quinnipiac,96,59,401924856
+2026-11-02,New Mexico,Utah Tech,100,60,401924894
+2026-11-02,Stephen F. Austin,Lyon,120,61,401925088
+2026-11-02,Texas St.,Texas A&M-Corpus Christi,67,55,401925096
+2026-11-02,Mississippi,Alcorn State,99,58,401925683
+2026-11-02,Michigan,Oakland,84,68,401925733
+2026-11-02,Washington State,Davidson,61,76,401925771
+2026-11-02,Houston,La Salle,94,55,401925811
+2026-11-02,Indiana State,Charlotte,70,78,401925818
+2026-11-02,North Texas,Southwestern Christian U,122,50,401925826
+2026-11-02,Temple,Central Connecticut,68,56,401925857
+2026-11-02,Tulsa,Ottawa (KS),98,50,401925862
+2026-11-02,Colorado St.,Montana St.,84,74,401925878
+2026-11-02,Oregon St.,Weber State,102,61,401925947
+2026-11-02,USC,Milwaukee,95,63,401926771
+2026-11-02,Kennesaw St.,Midway,116,57,401926787
+2026-11-02,UNC Wilmington,Mount Olive,101,65,401926862
+2026-11-02,UC Santa Barbara,San Francisco State,85,55,401928351
+2026-11-02,Middle Tennessee,Fisk,117,73,401928619
+2026-11-02,Illinois Chicago,St. Francis (IL),96,47,401928858
+2026-11-02,Valparaiso,Western Illinois,80,58,401928995
+2026-11-02,Charleston,Southern Wesleyan,111,55,401931655
+2026-11-03,Alabama,Sam Houston St.,96,74,401906757
+2026-11-03,Tennessee,Wofford,90,59,401906848
+2026-11-03,Boston College,Wagner,76,50,401909551
+2026-11-03,Kansas St.,South Dakota State,66,68,401909796
+2026-11-03,Pacific,Bethesda,102,47,401917511
+2026-11-03,Rhode Island,Holy Cross,103,59,401920061
+2026-11-03,San Diego St.,Cal State Fullerton,102,78,401920155
+2026-11-03,Georgia Tech,Hampton,75,55,401920304
+2026-11-03,Virginia Tech,Coppin State,88,54,401920376
+2026-11-03,Virginia,Drexel,89,60,401920422
+2026-11-03,Iowa,Lipscomb,76,54,401920702
+2026-11-03,Texas A&M,Alabama State,97,66,401920806
+2026-11-03,Missouri,Cleveland State,111,50,401921165
+2026-11-03,Kentucky,Manhattan,85,57,401921801
+2026-11-03,LSU,LSU New Orleans,100,57,401921808
+2026-11-03,South Carolina,Stetson,81,55,401921819
+2026-11-03,UNLV,Northern Arizona,89,77,401924911
+2026-11-03,Wyoming,Regis University,95,48,401924920
+2026-11-03,Duquesne,Purdue Fort Wayne,78,71,401925779
+2026-11-03,Northern Iowa,Cornell (IA),106,70,401927385
+2026-11-03,Arkansas,Arkansas-Pine Bluff,106,61,401929372
+2026-11-03,UC Irvine,Chapman,92,66,401929624
+2026-11-04,Butler,Fairleigh Dickinson,99,65,401902276
+2026-11-04,Saint Mary's,North Dakota State,105,64,401917512
+2026-11-04,Santa Clara,Milwaukee,95,72,401917513
+2026-11-04,Loyola Marymount,Queens University,95,96,401917514
+2026-11-04,California,Radford,84,70,401918052
+2026-11-04,Wichita St.,Cal State Northridge,79,67,401919028
+2026-11-04,Saint Joseph's,Longwood,82,73,401920191
+2026-11-04,High Point,Maryland Eastern Shore,63,49,401920410
+2026-11-04,Auburn,SE Louisiana,92,59,401920798
+2026-11-04,Furman,Bob Jones,121,52,401926111
+2026-11-04,Drake,Central College,101,48,401927361
+2026-11-04,Boise St.,West Coast Baptist,132,53,401929171
+2026-11-05,Florida,Jacksonville,88,57,401906770
+2026-11-05,Mississippi St.,Northwestern State,82,44,401906792
+2026-11-05,Texas,Gardner-Webb,98,50,401906864
+2026-11-05,Creighton,Le Moyne,83,55,401909491
+2026-11-05,DePaul,South Florida,82,80,401909501
+2026-11-05,Duke,Coastal Carolina,113,52,401909563
+2026-11-05,Pittsburgh,Buffalo,80,61,401909706
+2026-11-05,Syracuse,Central Connecticut,102,49,401909717
+2026-11-05,Vanderbilt,Wake Forest,74,51,401909726
+2026-11-05,Arizona,Cal Poly,104,84,401909739
+2026-11-05,Fordham,Stonehill,83,63,401911195
+2026-11-05,Loyola Chicago,West Georgia,76,53,401911229
+2026-11-05,Illinois,Penn,112,70,401913526
+2026-11-05,Indiana,Bellarmine,92,69,401916287
+2026-11-05,Penn St.,Chattanooga,97,93,401917177
+2026-11-05,SMU,VMI,95,70,401918968
+2026-11-05,Seton Hall,Long Island University,67,60,401919804
+2026-11-05,Notre Dame,Mercyhurst,83,56,401919823
+2026-11-05,Virginia Tech,Mercer,96,67,401920377
+2026-11-05,Belmont,Centre,75,45,401920759
+2026-11-05,Tulsa,Northern Illinois,94,75,401920913
+2026-11-05,Texas Tech,Bethune-Cookman,76,58,401921133
+2026-11-05,Utah,Towson,67,57,401921698
+2026-11-05,Cincinnati,Green Bay,81,64,401921747
+2026-11-05,North Texas,McNeese,77,67,401925031
+2026-11-05,Alcorn State,Howard,83,94,401925684
+2026-11-05,Michigan St.,Toledo,91,61,401925754
+2026-11-05,Charlotte,Georgia State,77,67,401925819
+2026-11-05,Illinois St.,Central State,100,55,401927373
+2026-11-05,Richmond,Southern Virginia,107,46,401927395
+2026-11-05,Western Kentucky,Kentucky Wesleyan,82,48,401928800
+2026-11-05,Western Michigan,Kalamazoo,99,52,401928849
+2026-11-05,Texas St.,Howard Payne,135,66,401929198
+2026-11-06,Alabama,Arkansas State,101,86,401906758
+2026-11-06,Georgia,Presbyterian,91,77,401906780
+2026-11-06,Oklahoma,Mississippi Valley State,84,57,401906802
+2026-11-06,Marquette,Detroit Mercy,93,32,401909523
+2026-11-06,Xavier,Eastern Michigan,76,53,401909542
+2026-11-06,Boston College,Massachusetts,71,55,401909552
+2026-11-06,Florida St.,Troy,91,68,401909695
+2026-11-06,Baylor,Arkansas-Pine Bluff,109,53,401909751
+2026-11-06,Iowa St.,Southern Miss,83,57,401909772
+2026-11-06,Kansas,Middle Tennessee,89,45,401909785
+2026-11-06,Kansas St.,Cal State Northridge,95,78,401909797
+2026-11-06,Missouri,Saint Louis,84,90,401911249
+2026-11-06,Clemson,American University,82,73,401912208
+2026-11-06,North Carolina,Wofford,109,70,401913100
+2026-11-06,Minnesota,St. Thomas,76,62,401916304
+2026-11-06,Ohio St.,Youngstown State,89,65,401916314
+2026-11-06,San Diego,Tarleton State,96,90,401917515
+2026-11-06,Loyola Marymount,Lincoln (CA),102,50,401917516
+2026-11-06,Mississippi,Central Arkansas,92,60,401917914
+2026-11-06,Kennesaw St.,Austin Peay,71,69,401917949
+2026-11-06,N.C. State,East Tennessee State,77,63,401918956
+2026-11-06,UAB,Nicholls,70,63,401919015
+2026-11-06,Oklahoma St.,Queens University,118,68,401919040
+2026-11-06,TCU,Southern,106,54,401919048
+2026-11-06,George Mason,Coppin State,68,51,401920072
+2026-11-06,Georgia Tech,Georgia Southern,95,83,401920305
+2026-11-06,Oregon St.,California Baptist,96,68,401920344
+2026-11-06,Virginia,Northeastern,97,72,401920423
+2026-11-06,Michigan,Connecticut,77,85,401920685
+2026-11-06,Oregon,Eastern Washington,98,71,401920717
+2026-11-06,Iowa,Eastern Illinois,91,47,401920726
+2026-11-06,Northwestern,Stony Brook,78,65,401920733
+2026-11-06,Texas A&M,Northern Kentucky,104,67,401920807
+2026-11-06,Wisconsin,Delaware,73,64,401920894
+2026-11-06,Villanova,Holy Cross,95,66,401921285
+2026-11-06,Miami FL,Wagner,83,57,401921719
+2026-11-06,Stanford,Oakland,81,63,401921727
+2026-11-06,Arizona St.,Northern Colorado,90,63,401921732
+2026-11-06,BYU,Omaha,108,67,401921739
+2026-11-06,UCF,Yale,87,75,401921754
+2026-11-06,West Virginia,Stetson,91,53,401921767
+2026-11-06,Kentucky,James Madison,89,80,401921802
+2026-11-06,LSU,Texas Southern,92,51,401921809
+2026-11-06,Wyoming,Idaho State,93,62,401922021
+2026-11-06,UCLA,North Florida,114,63,401922219
+2026-11-06,Colorado St.,Idaho,78,67,401922261
+2026-11-06,Wright St.,Florida Atlantic,97,71,401923260
+2026-11-06,Stephen F. Austin,Texas Lutheran,89,32,401925089
+2026-11-06,Purdue,Valparaiso,80,83,401926131
+2026-11-06,Rutgers,New Haven,81,54,401926135
+2026-11-06,Charleston,Newberry,112,66,401926813
+2026-11-06,Illinois Chicago,Robert Morris,79,56,401928823
+2026-11-06,Hawaii,Bethesda,116,44,401929001
+2026-11-07,Georgetown,Maryland,86,74,401909513
+2026-11-07,Nebraska,Providence,67,58,401909532
+2026-11-07,Colorado,San Diego St.,66,77,401909760
+2026-11-07,Miami OH,Bellarmine,80,73,401911007
+2026-11-07,Dayton,Northern Illinois,76,81,401911186
+2026-11-07,Canisius,St. Bonaventure,49,88,401911262
+2026-11-07,Grand Canyon,Bethune-Cookman,99,81,401911345
+2026-11-07,UC Irvine,San José State,91,79,401911470
+2026-11-07,Seattle,Portland State,79,60,401917517
+2026-11-07,Bradley,Pacific,52,63,401917518
+2026-11-07,Santa Clara,Sacramento State,83,77,401917519
+2026-11-07,Louisville,Morehead State,107,57,401918948
+2026-11-07,East Carolina,UNC Wilmington,75,78,401918977
+2026-11-07,Memphis,VCU,89,88,401918986
+2026-11-07,Rhode Island,Monmouth,84,66,401920062
+2026-11-07,Saint Joseph's,Lafayette,67,57,401920192
+2026-11-07,UC San Diego,Fresno State,81,65,401920371
+2026-11-07,High Point,Washington State,83,71,401920411
+2026-11-07,Weber State,Utah Valley,93,101,401920435
+2026-11-07,Montana St.,Long Beach State,83,70,401924264
+2026-11-07,New Mexico,Northern Arizona,94,65,401924895
+2026-11-07,UNLV,Samford,88,79,401924912
+2026-11-07,Murray St.,Northwestern State,93,71,401925077
+2026-11-07,Davidson,Mercer,88,76,401925772
+2026-11-07,Duquesne,Central State,68,58,401925780
+2026-11-07,Furman,Northern Iowa,98,83,401926112
+2026-11-07,Liberty,Boyce,113,54,401926793
+2026-11-07,George Washington,Hampton,75,61,401926825
+2026-11-07,UC Santa Barbara,Oakland,90,67,401928352
+2026-11-07,Gonzaga,New Mexico State,109,68,401928788
+2026-11-07,Sam Houston St.,Howard Payne,102,59,401928793
+2026-11-07,Utah St.,Omaha,90,56,401929293
+2026-11-08,Boise St.,Butler,100,81,401902277
+2026-11-08,Penn St.,Pittsburgh,76,82,401909707
+2026-11-08,Temple,Richmond,53,79,401911238
+2026-11-08,Nevada,Saint Mary's,96,95,401911453
+2026-11-08,Houston,California,86,68,401918053
+2026-11-08,USC,Wichita St.,93,86,401919029
+2026-11-08,Chicago,Harvard,47,63,401920355
+2026-11-08,Virginia,Arkansas,91,72,401920424
+2026-11-08,Western Michigan,Campbell,87,71,401920739
+2026-11-08,South Carolina,Southeast Missouri State,78,68,401921820
+2026-11-08,St. John's,Iona,104,65,401924646
+2026-11-08,Tennessee Tech,Western Kentucky,97,94,401926215
+2026-11-08,Drake,Southern,75,68,401927362
+2026-11-08,Hawaii,UT Arlington,71,62,401929002
+2026-11-09,Alabama,Oakland,109,68,401906759
+2026-11-09,Georgia,Florida Gulf Coast,80,72,401906781
+2026-11-09,Mississippi St.,Jackson State,98,57,401906793
+2026-11-09,Oklahoma,North Alabama,81,72,401906803
+2026-11-09,Tennessee,Radford,70,47,401906849
+2026-11-09,Texas,Grambling,93,62,401906865
+2026-11-09,DePaul,Alabama A&M,84,47,401909502
+2026-11-09,Indiana,Syracuse,83,80,401909718
+2026-11-09,Bowling Green,Cleveland State,95,79,401911010
+2026-11-09,Cincinnati,Minnesota,61,63,401916305
+2026-11-09,Ohio St.,Marshall,84,74,401916315
+2026-11-09,Texas A&M,UL Monroe,108,67,401917978
+2026-11-09,Clemson,North Dakota,92,77,401918074
+2026-11-09,UAB,Florida A&M,92,64,401919016
+2026-11-09,Towson,Long Island University,66,46,401919806
+2026-11-09,Connecticut,Wagner,83,41,401920686
+2026-11-09,Oregon St.,Eastern Washington,94,84,401920718
+2026-11-09,Northwestern,Boston University,72,55,401920734
+2026-11-09,Auburn,App State,75,53,401920799
+2026-11-09,Charlotte,Seton Hall,62,68,401920887
+2026-11-09,Stanford,Rice,91,73,401921095
+2026-11-09,Penn,Howard,78,65,401921180
+2026-11-09,Miami FL,North Florida,89,51,401921720
+2026-11-09,LSU,Louisiana Tech,90,50,401921810
+2026-11-09,Missouri,SIU Edwardsville,96,58,401921815
+2026-11-09,Notre Dame,Eastern Illinois,94,70,401925681
+2026-11-09,Washington,Mississippi Valley State,77,64,401925737
+2026-11-09,Purdue,Illinois St.,76,59,401926132
+2026-11-09,Illinois Chicago,UNC Greensboro,82,72,401926181
+2026-11-09,Akron,Muskingum,112,64,401928833
+2026-11-09,Hawaii,Portland,66,73,401929003
+2026-11-10,Florida St.,Florida,72,81,401906771
+2026-11-10,Kansas St.,Creighton,89,82,401909492
+2026-11-10,Georgetown,Delaware State,83,78,401909514
+2026-11-10,Providence,Bryant,78,55,401909533
+2026-11-10,Xavier,Detroit Mercy,100,55,401909543
+2026-11-10,Boston College,Maryland Eastern Shore,82,54,401909553
+2026-11-10,Duke,Michigan St.,73,79,401909564
+2026-11-10,Wake Forest,Charleston Southern,82,64,401909727
+2026-11-10,Arizona,Northern Arizona,90,59,401909740
+2026-11-10,Baylor,Yale,90,61,401909752
+2026-11-10,Colorado,San Diego,83,75,401909761
+2026-11-10,Iowa St.,Southern,84,47,401909773
+2026-11-10,Kentucky,Kansas,69,89,401909786
+2026-11-10,Dayton,Siena,89,99,401911187
+2026-11-10,Fordham,Iona,78,72,401911196
+2026-11-10,George Washington,Elon,69,50,401911209
+2026-11-10,Saint Louis,Northern Kentucky,125,63,401911250
+2026-11-10,North Carolina,Wyoming,76,63,401913101
+2026-11-10,Texas Tech,Illinois,84,78,401913527
+2026-11-10,Troy,Loyola Marymount,74,69,401917520
+2026-11-10,TCU,UL Monroe,100,92,401917979
+2026-11-10,N.C. State,Presbyterian,94,60,401918957
+2026-11-10,SMU,Prairie View A&M,98,63,401918969
+2026-11-10,Vanderbilt,Memphis,105,81,401918987
+2026-11-10,Rhode Island,Maine,71,65,401920063
+2026-11-10,Georgia Tech,Eastern Kentucky,85,71,401920306
+2026-11-10,Northeastern,Harvard,74,70,401920356
+2026-11-10,Iowa,Virginia Tech,88,93,401920378
+2026-11-10,Virginia,Bucknell,95,61,401920425
+2026-11-10,Lipscomb,Belmont,88,75,401920704
+2026-11-10,Mississippi,SE Louisiana,91,51,401920817
+2026-11-10,Rutgers,NJIT,101,64,401920866
+2026-11-10,Wisconsin,Fairfield,89,42,401920895
+2026-11-10,Utah,Weber State,85,64,401921699
+2026-11-10,Arizona St.,Hofstra,85,63,401921733
+2026-11-10,BYU,Queens University,98,82,401921740
+2026-11-10,UCF,South Alabama,76,69,401921755
+2026-11-10,Villanova,La Salle,80,59,401921774
+2026-11-10,New Mexico,Little Rock,94,69,401924896
+2026-11-10,UT Rio Grande Valley,Texas St.,65,72,401925107
+2026-11-10,Murray St.,Alcorn State,94,57,401925685
+2026-11-10,Kennesaw St.,Winthrop,88,79,401925708
+2026-11-10,Davidson,Bradley,62,45,401925773
+2026-11-10,Duquesne,Washington State,72,71,401925781
+2026-11-10,Utah St.,Utah Tech,118,86,401925940
+2026-11-10,Middle Tennessee,Evansville,73,68,401927369
+2026-11-10,Northern Iowa,Green Bay,89,76,401927386
+2026-11-10,Toledo,Wright St.,68,76,401928828
+2026-11-11,Michigan,Marquette,84,70,401909524
+2026-11-11,Air Force,Loyola Chicago,107,93,401911230
+2026-11-11,St. Bonaventure,Cornell,88,64,401911263
+2026-11-11,Grand Canyon,Cal Poly,99,71,401911346
+2026-11-11,UC Santa Barbara,Nevada,76,63,401911454
+2026-11-11,Seattle,UTSA,59,86,401917521
+2026-11-11,North Texas,Santa Clara,71,76,401917522
+2026-11-11,Long Beach State,Pacific,62,59,401917523
+2026-11-11,Abilene Christian,Stephen F. Austin,71,76,401917963
+2026-11-11,California,USC,65,77,401918054
+2026-11-11,Florida Atlantic,William & Mary,95,90,401918452
+2026-11-11,Saint Joseph's,South Florida,83,80,401918992
+2026-11-11,Wichita St.,Friends,113,60,401919030
+2026-11-11,VCU,NJIT,87,49,401920202
+2026-11-11,St. John's,Colgate,90,59,401920680
+2026-11-11,Delaware,James Madison,61,71,401920903
+2026-11-11,Navy,Penn,81,76,401921181
+2026-11-11,Holy Cross,Furman,67,80,401921286
+2026-11-11,South Carolina,Saint Peter's,77,41,401921821
+2026-11-11,Notre Dame,South Carolina State,99,59,401925682
+2026-11-11,Houston,Jacksonville State,92,46,401925702
+2026-11-11,San Diego St.,Bethune-Cookman,88,75,401925717
+2026-11-11,Oregon,Mississippi Valley State,100,66,401925738
+2026-11-11,Temple,Charleston,81,91,401925858
+2026-11-11,Tulsa,Oral Roberts,80,71,401925863
+2026-11-11,Colorado St.,Portland State,87,71,401925915
+2026-11-11,Nebraska,Lindenwood,94,60,401926062
+2026-11-11,UNC Wilmington,Kent State,91,73,401926863
+2026-11-11,Sam Houston St.,Pepperdine,85,77,401928794
+2026-11-11,Western Kentucky,Campbellsville,78,51,401928801
+2026-11-11,Boise St.,Oakland,111,79,401928814
+2026-11-11,Arkansas,Robert Morris,76,53,401928824
+2026-11-11,South Dakota State,Valparaiso,81,69,401928996
+2026-11-11,UC Irvine,Lincoln (CA),90,40,401929625
+2026-11-11,UCLA,Arkansas-Pine Bluff,106,37,401930177
+2026-11-12,Bowling Green,Niagara,88,76,401911013
+2026-11-12,Southern Illinois,Richmond,80,70,401911239
+2026-11-12,Indiana,Tennessee Tech,90,66,401916288
+2026-11-12,Minnesota,Southern,91,61,401916306
+2026-11-12,Penn St.,Mercyhurst,72,57,401917176
+2026-11-12,South Alabama,Loyola Marymount,79,72,401917524
+2026-11-12,Texas A&M,Oklahoma St.,88,69,401919041
+2026-11-12,Rhode Island,Maryland Eastern Shore,67,47,401920064
+2026-11-12,George Mason,Kansas City,76,68,401920073
+2026-11-12,High Point,Southern Utah,88,59,401920412
+2026-11-12,Towson,Loyola Maryland,90,60,401920566
+2026-11-12,BYU,Montana St.,86,71,401921741
+2026-11-12,West Virginia,Mercer,75,61,401921768
+2026-11-12,Howard,Stetson,75,62,401922239
+2026-11-12,Kennesaw St.,LaGrange,107,54,401926788
+2026-11-12,Purdue Fort Wayne,Western Michigan,59,81,401928818
+2026-11-13,Butler,Pittsburgh,64,76,401902278
+2026-11-13,Alabama,Seton Hall,82,76,401906760
+2026-11-13,Florida,Merrimack,83,54,401906772
+2026-11-13,North Carolina,Georgia,70,78,401906782
+2026-11-13,Mississippi St.,Xavier,63,81,401906794
+2026-11-13,Oklahoma,Fairleigh Dickinson,74,58,401906804
+2026-11-13,Tennessee,Tennessee State,83,78,401906850
+2026-11-13,Northwestern,DePaul,47,67,401909503
+2026-11-13,Clemson,Georgetown,78,85,401909515
+2026-11-13,Duke,SIU Edwardsville,90,47,401909565
+2026-11-13,Florida St.,Texas A&M-Corpus Christi,84,60,401909696
+2026-11-13,Auburn,Arizona,69,80,401909741
+2026-11-13,SMU,Ball State,90,65,401911014
+2026-11-13,Fordham,Long Island University,80,58,401911197
+2026-11-13,George Washington,Harvard,85,57,401911210
+2026-11-13,Illinois,Sam Houston St.,108,86,401913528
+2026-11-13,Maryland,Virginia,83,87,401916297
+2026-11-13,Connecticut,Ohio St.,84,68,401916316
+2026-11-13,Saint Mary's,Illinois Chicago,84,61,401917525
+2026-11-13,San Diego,Chicago State,87,67,401917526
+2026-11-13,Arkansas,Central Arkansas,79,66,401917916
+2026-11-13,Arizona St.,UL Monroe,92,62,401917980
+2026-11-13,N.C. State,Troy,81,62,401918958
+2026-11-13,TCU,Milwaukee,76,64,401919049
+2026-11-13,Utah St.,UC San Diego,120,82,401920372
+2026-11-13,Virginia Tech,Mount St. Mary's,82,62,401920379
+2026-11-13,UCF,Georgia Southern,84,70,401921026
+2026-11-13,Miami FL,North Alabama,94,52,401921721
+2026-11-13,UNLV,Stanford,76,68,401921728
+2026-11-13,Kentucky,Northern Arizona,78,77,401921803
+2026-11-13,Vanderbilt,Prairie View A&M,89,62,401921825
+2026-11-13,Rutgers,Bryant,72,51,401923270
+2026-11-13,Oregon St.,Mississippi Valley State,81,65,401925739
+2026-11-13,Michigan St.,Northern Iowa,106,72,401925755
+2026-11-13,Charlotte,App State,60,66,401925820
+2026-11-13,Samford,Wright St.,66,90,401926117
+2026-11-13,Purdue,Ohio,80,62,401926133
+2026-11-13,Middle Tennessee,Southeast Missouri State,88,75,401926152
+2026-11-13,Liberty,North Carolina Central,74,66,401926794
+2026-11-13,Drake,South Dakota,81,72,401927363
+2026-11-13,North Dakota State,Illinois St.,82,81,401927374
+2026-11-13,Murray St.,Texas Southern,99,78,401927380
+2026-11-13,Texas St.,Southern Miss,85,65,401929199
+2026-11-14,Providence,Colorado,67,53,401909534
+2026-11-14,Wake Forest,Southern Utah,89,51,401909728
+2026-11-14,Evansville,Miami OH,78,86,401911015
+2026-11-14,Dayton,Cincinnati,72,95,401911188
+2026-11-14,Colorado St.,Loyola Chicago,58,73,401911231
+2026-11-14,St. Bonaventure,Lafayette,81,58,401911264
+2026-11-14,Duquesne,Binghamton,71,58,401911276
+2026-11-14,Grand Canyon,UL Monroe,88,52,401911347
+2026-11-14,South Carolina,Gardner-Webb,79,62,401911392
+2026-11-14,Nevada,Utah Valley,71,73,401911455
+2026-11-14,Santa Clara,New Mexico,90,85,401917530
+2026-11-14,Wichita St.,Austin Peay,76,60,401917951
+2026-11-14,California,Utah Tech,79,73,401918055
+2026-11-14,South Florida,Coppin State,73,63,401918993
+2026-11-14,Akron,Tulane,65,63,401919004
+2026-11-14,Jacksonville State,UAB,71,68,401919017
+2026-11-14,Texas Tech,Stonehill,88,37,401919847
+2026-11-14,Bradley,George Mason,62,61,401920074
+2026-11-14,Saint Joseph's,Penn,83,77,401920193
+2026-11-14,Georgia Tech,UNC Asheville,75,74,401920307
+2026-11-14,Towson,UMBC,68,42,401920568
+2026-11-14,Belmont,Furman,72,62,401920760
+2026-11-14,Stephen F. Austin,Rice,78,81,401921096
+2026-11-14,Gonzaga,LSU,80,81,401921689
+2026-11-14,Villanova,Rider,99,62,401921775
+2026-11-14,Florida Atlantic,Coastal Georgia,78,63,401923261
+2026-11-14,Denver,Wyoming,53,76,401924921
+2026-11-14,Davidson,Howard,58,64,401925774
+2026-11-14,North Texas,South Alabama,66,65,401925827
+2026-11-14,Oakland,Northern Iowa,80,76,401927387
+2026-11-14,UNC Wilmington,Montreat,100,41,401934189
+2026-11-15,Texas,Baylor,75,72,401906866
+2026-11-15,Iowa,Creighton,69,70,401909493
+2026-11-15,Missouri,Marquette,69,64,401909525
+2026-11-15,Boston College,New Hampshire,67,55,401909554
+2026-11-15,Iowa St.,Niagara,66,45,401909774
+2026-11-15,Saint Louis,High Point,58,68,401911251
+2026-11-15,American University,Harvard,70,64,401912210
+2026-11-15,Penn St.,New Haven,86,52,401917175
+2026-11-15,Seattle,Idaho State,77,70,401917528
+2026-11-15,Loyola Marymount,Chicago State,86,49,401917531
+2026-11-15,Michigan,William & Mary,123,79,401918453
+2026-11-15,Memphis,Louisville,98,78,401918949
+2026-11-15,James Madison,Mercyhurst,80,71,401919825
+2026-11-15,Rhode Island,Princeton,79,72,401920065
+2026-11-15,Montana St.,Cal Poly,77,52,401920124
+2026-11-15,St. John's,Syracuse,79,62,401920681
+2026-11-15,Wisconsin,Coastal Carolina,89,81,401920896
+2026-11-15,Southern Indiana,Western Michigan,59,80,401923393
+2026-11-15,La Salle,Temple,71,84,401925812
+2026-11-15,Charleston,South Carolina State,90,66,401925926
+2026-11-15,Nebraska,Boise St.,102,75,401926063
+2026-11-15,USC,Arkansas-Pine Bluff,122,46,401926772
+2026-11-15,UC Santa Barbara,UC Merced,97,47,401928353
+2026-11-15,San Diego St.,New Mexico State,73,61,401928789
+2026-11-15,UTSA,Texas St.,67,87,401929200
+2026-11-15,Pacific,Air Force,93,69,401934396
+2026-11-16,George Washington,Ferrum,94,57,401911211
