@@ -282,6 +282,9 @@ function applyGames(text){
     if(a){a.g.push({o:b,m:sa-sb}); if(post){sa>sb?a.w++:a.l++;}}
     if(b){b.g.push({o:a,m:sb-sa}); if(post){sb>sa?b.w++:b.l++;}}
   });
+  /* records: the ratings file can be a day behind, so when the game log covers at least as many games
+     as the ratings file's record, count the record from the log itself */
+  TEAMS.forEach(t=>{ if(t.g.length&&t.g.length>=t.w0+t.l0){ t.w=t.g.filter(x=>x.m>0).length; t.l=t.g.filter(x=>x.m<0).length; } });
   const avg=a=>a.length?a.reduce((x,y)=>x+y,0)/a.length:null;
   let teams=0;
   TEAMS.forEach(t=>{
