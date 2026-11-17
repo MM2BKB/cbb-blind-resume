@@ -15,7 +15,7 @@ META_JSON = os.path.join(DATA, "meta.json")
 UNMATCHED = os.path.join(DATA, "unmatched.txt")
 
 SEASON_YEAR = 2027                 # the 2026-27 season is "2027" on barttorvik.com
-SEASON_START = dt.date(2026, 11, 2)
+SEASON_START = dt.date(2026, 11, 1)   # opening games were played Nov 1 (Rome)
 TORVIK_URL = f"https://barttorvik.com/{SEASON_YEAR}_team_results.csv"
 ESPN_URL = ("https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/"
             "scoreboard?dates={d}&groups=50&limit=1000")
@@ -189,6 +189,9 @@ def main():
                 errors += 1
                 log("ESPN fetch failed for", key, ":", e)
         d += dt.timedelta(days=1)
+    # a hand-added game (id starting with "manual") is dropped once ESPN supplies the same matchup
+    real = {(g[0], frozenset((g[1], g[2]))) for g in games.values() if not g[5].startswith("manual")}
+    games = {k: g for k, g in games.items() if not (g[5].startswith("manual") and (g[0], frozenset((g[1], g[2]))) in real)}
     rows = sorted(games.values(), key=lambda g: (g[0], g[5]))
     if not got_any:
         rows = undated + rows      # keep the starter data until real results arrive
