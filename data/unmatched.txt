@@ -1,3 +1,4 @@
+Abilene Christian
 Abraham Baldwin Agricultural
 Air Force
 Alabama A&M
@@ -17,9 +18,11 @@ Brown
 Buffalo
 Cal Poly
 Cal State Bakersfield
+Calumet St. Joseph
 Campbell
 Canisius
 Capital
+Central Arkansas
 Central Connecticut
 Central Michigan
 Charleston Southern
@@ -29,7 +32,10 @@ Cleveland State
 Coastal Carolina
 Coastal Georgia
 Colgate
+Colorado Colorado Springs
+Columbia
 Coppin State
+Dallas Christian
 Dartmouth
 DeSales
 Delaware
@@ -41,6 +47,7 @@ Doane
 Drexel
 Earlham
 East Carolina
+East Texas A&M
 Eastern Illinois
 Eastern Kentucky
 Ecclesia
@@ -80,8 +87,11 @@ Loyola Maryland
 Maine
 Manhattan
 Marshall
+Mayville State
 Mercyhurst
 Miami (OH) Hamilton
+Midway
+Missouri State
 Montana
 Montreat
 Morehead State
@@ -120,6 +130,7 @@ Radford
 Rice
 Rider
 Robert Morris
+SE Louisiana
 Sacramento State
 San Francisco
 San José State
@@ -130,6 +141,7 @@ South Carolina State
 South Carolina Upstate
 South Dakota
 South Dakota State
+Southeast Missouri State
 Southern Indiana
 Southern New Orleans
 Southern Utah
@@ -137,6 +149,7 @@ St. Thomas
 Stetson
 Stillman
 Stonehill
+Tarleton State
 Tennessee Tech
 The Citadel
 Toledo
@@ -160,6 +173,7 @@ Washington State
 Weber State
 West Georgia
 Western Carolina
+Western Illinois
 William & Mary
 Winthrop
 Wofford
