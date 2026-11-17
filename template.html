@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CBB Blind Resume</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: a scoreboard. Team A | metric | Team B, read straight across each row. */
+:root{
+  --bg:#eef1f5;
+  --panel:#ffffff;
+  --ink:#0e1a2b;
+  --muted:#5b6778;
+  --line:#d6dce5;
+  --accent:#d9480f;
+  --accent-ink:#ffffff;
+  --soft:#f4f6f9;
+  --good:#1b7f4b;
+  --display:'Barlow Condensed','Arial Narrow',sans-serif;
+  --body:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0b1320; --panel:#121d2f; --ink:#e8edf5; --muted:#96a3b8; --line:#26354d;
+    --accent:#ff7a3d; --accent-ink:#1a0c04; --soft:#17243a; --good:#4fd08a;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0b1320; --panel:#121d2f; --ink:#e8edf5; --muted:#96a3b8; --line:#26354d;
+  --accent:#ff7a3d; --accent-ink:#1a0c04; --soft:#17243a; --good:#4fd08a;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.45}
+body{min-height:100%}
+.wrap{max-width:860px;margin:0 auto;padding:20px 16px 48px}
+header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:16px}
+h1{font-family:var(--display);font-weight:700;font-size:40px;line-height:1;margin:0;letter-spacing:.01em;text-transform:uppercase}
+h1 span{color:var(--accent)}
+.sub{margin:6px 0 0;color:var(--muted);font-size:14px}
+.banner{background:var(--soft);border:1px solid var(--line);border-left:4px solid var(--accent);padding:8px 12px;font-size:13px;color:var(--muted);margin-bottom:16px;border-radius:4px}
+.banner b{color:var(--ink)}
+nav[role=tablist]{display:flex;gap:4px;border-bottom:2px solid var(--line);margin-bottom:20px;overflow-x:auto}
+nav button{font:600 14px var(--body);background:none;border:0;color:var(--muted);padding:10px 14px;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px;white-space:nowrap}
+nav button[aria-selected=true]{color:var(--ink);border-bottom-color:var(--accent)}
+button:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.progress{display:flex;align-items:center;gap:12px;margin-bottom:12px;font-size:13px;color:var(--muted)}
+.bar{flex:1;height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent);width:0}
+.q{font-family:var(--display);font-size:26px;font-weight:600;margin:0 0 12px;text-transform:uppercase;letter-spacing:.02em;text-wrap:balance}
+.board{background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.head,.row,.vote{display:grid;grid-template-columns:1fr minmax(96px,128px) 1fr;align-items:center}
+.head{background:var(--ink);color:var(--bg);padding:12px 8px}
+.head div{text-align:center;font-family:var(--display);font-weight:700;font-size:28px;letter-spacing:.03em;line-height:1}
+.head small{display:block;font:500 11px var(--mono);opacity:.7;margin-top:4px;letter-spacing:.04em}
+.head .mid{font-size:12px;font-family:var(--mono);opacity:.6;font-weight:400}
+.grp{padding:8px 12px 4px;font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);background:var(--soft);border-top:1px solid var(--line)}
+.row{padding:9px 8px;border-top:1px solid var(--line)}
+.row .v{text-align:center;font:500 20px var(--mono);font-variant-numeric:tabular-nums}
+.row .l{text-align:center;font-size:12px;color:var(--muted);line-height:1.2}
+.vote{padding:14px 8px;gap:8px;border-top:2px solid var(--line);background:var(--soft)}
+.btn{font:600 15px var(--body);border:2px solid var(--ink);background:var(--panel);color:var(--ink);padding:12px 8px;border-radius:6px;cursor:pointer}
+.btn:hover{background:var(--ink);color:var(--bg)}
+.btn.pick{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.pick:hover{filter:brightness(1.08);background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{border-color:var(--line);color:var(--muted);font-weight:500;font-size:13px}
+.vote .btn{width:calc(100% - 0px)}
+.tools{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;align-items:center}
+.tools .btn{padding:8px 12px;font-size:13px}
+.hint{font-size:12px;color:var(--muted);font-family:var(--mono)}
+table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+th,td{padding:10px 10px;text-align:left;border-bottom:1px solid var(--line);font-size:14px}
+th{font:500 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--soft)}
+td.n{font-family:var(--mono);font-variant-numeric:tabular-nums}
+td.rk{font-family:var(--display);font-size:24px;font-weight:700;width:48px;color:var(--accent)}
+.scroll{overflow-x:auto}
+.empty{padding:32px 16px;text-align:center;color:var(--muted);background:var(--panel);border:1px dashed var(--line);border-radius:8px}
+.lens{display:grid;gap:10px}
+.lens .it{display:grid;grid-template-columns:130px 1fr 52px;gap:10px;align-items:center;font-size:14px}
+.track{position:relative;height:14px;background:var(--line);border-radius:3px}
+.track i{position:absolute;left:0;top:0;bottom:0;background:var(--accent);border-radius:3px}
+.track::after{content:"";position:absolute;left:50%;top:-3px;bottom:-3px;width:2px;background:var(--ink)}
+.lens .p{font:500 14px var(--mono);text-align:right}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:16px;margin-bottom:16px}
+.card h2{font-family:var(--display);text-transform:uppercase;font-size:22px;margin:0 0 8px;letter-spacing:.02em}
+.card p{margin:0 0 8px;max-width:65ch}
+label.chk{display:inline-flex;gap:8px;align-items:center;font-size:14px;cursor:pointer}
+code{font-family:var(--mono);font-size:13px;background:var(--soft);padding:1px 5px;border-radius:3px}
+.tri .head,.tri .row,.tri .vote{grid-template-columns:minmax(76px,.9fr) repeat(3,minmax(0,1fr))}
+.tri .head div{font-size:22px}
+.tri .head .mid{font-size:11px}
+.tri .head .sel{color:var(--accent)}
+.tri .row .l{text-align:left;font-size:11px;padding-right:4px}
+.tri .row .v{font-size:17px}
+.tri .vote .btn{padding:10px 4px;font-size:13px}
+.btn.picked{background:var(--soft);border-color:var(--line);color:var(--muted);cursor:default}
+.flags{display:grid;grid-template-columns:minmax(76px,.9fr) repeat(3,minmax(0,1fr));gap:8px;padding:0 8px 12px;background:var(--soft);align-items:start}
+.flags .l{text-align:left;font-size:11px;color:var(--muted);line-height:1.2;padding-top:6px}
+.fl{display:flex;flex-direction:column;gap:6px}
+.mini{font:500 12px var(--body);border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:5px;padding:6px 6px;cursor:pointer}
+.mini:hover{border-color:var(--ink)}
+.mini.on{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.pool{margin:0 0 8px;font-size:14px;color:var(--muted)}
+.pool b{color:var(--ink)}
+tr.tiers td{font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);background:var(--soft)}
+@media (max-width:480px){
+  .tri .head div{font-size:18px}
+  .tri .row .v{font-size:14px}
+  h1{font-size:32px}
+  .head div{font-size:22px}
+  .row .v{font-size:17px}
+  .lens .it{grid-template-columns:96px 1fr 46px;font-size:13px}
+}
+@media (prefers-reduced-motion:no-preference){.bar i{transition:width .3s}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>CBB Blind <span>Resume</span></h1>
+      <p class="sub">Pick the better tournament resume. No names, no logos, no brands.</p>
+    </div>
+  </header>
+
+  <div class="banner"><b>Updated daily.</b> Ratings come from Bart Torvik and scores from the ESPN scoreboard. Last update: {{UPDATED}}.</div>
+
+  <nav role="tablist" aria-label="Sections">
+    <button role="tab" id="tab-compare" aria-selected="true" data-tab="compare">Compare</button>
+    <button role="tab" id="tab-rank" aria-selected="false" data-tab="rank">My Top 40</button>
+    <button role="tab" id="tab-lens" aria-selected="false" data-tab="lens">My Voting Profile</button>
+    <button role="tab" id="tab-about" aria-selected="false" data-tab="about">How It Works</button>
+  </nav>
+
+  <section id="view-compare"></section>
+  <section id="view-rank" hidden></section>
+  <section id="view-lens" hidden></section>
+  <section id="view-about" hidden></section>
+</div>
+
+<script>
+/* ---------- DATA ----------
+   Source: barttorvik.com, Nov 16 2026. One team per line, in rank order:
+   name,conference,record,AdjOE,AdjDE,Barthag,AdjTempo,WAB */
+const RAW=`{{RAW}}`;
+const TEAMS=RAW.split('\n').map((ln,i)=>{
+  const [name,conf,rc,oe,de,bar,tempo,wab]=ln.split(',');
+  const [w,l]=rc.split('-').map(Number);
+  return {id:i,g:[],name,conf,w,l,w0:w,l0:l,oe:+oe,de:+de,bar:+bar,tempo:+tempo,wab:+wab,rk:i+1,code:'R-'+(100+((i*53)%900))};
+});
+const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
+
+/* ---------- ROWS ---------- */
+const rec=(a)=>`${a[0]}–${a[1]}`;
+const trendFmt=x=>x==null?'—':(x>0.05?'▲ +'+x.toFixed(1):x<-0.05?'▼ '+Math.abs(x).toFixed(1).replace(/^/,'−'):'● 0.0');
+const movFmt=x=>x?((x[0]>0?'+':x[0]<0?'−':'')+Math.abs(x[0]).toFixed(1)+' <small style="font-size:11px;color:var(--muted)">'+x[1]+'g</small>'):'—';
+const bestWin=t=>{let b=null;(t.g||[]).forEach(x=>{if(x.m>0){const r=x.o?x.o.rk:999;if(b===null||r<b)b=r;}});return b;};
+const worstLoss=t=>{let b=null;(t.g||[]).forEach(x=>{if(x.m<0){const r=x.o?x.o.rk:999;if(b===null||r>b)b=r;}});return b;};
+const fmtRk=r=>r==null?'—':(r>=999?'Non-D1':'#'+r);
+const sg=x=>(x>0?'+':'')+x.toFixed(2);
+const GROUPS=[
+ {g:'Record',rows:[
+  {l:'Overall',f:t=>rec([t.w,t.l])}]},
+ {g:'Résumé strength',rows:[
+  {l:'Wins Above Bubble',f:t=>sg(t.wab)}]},
+ {g:'Efficiency per 100 possessions',rows:[
+  {l:'Adj. offense',f:t=>t.oe.toFixed(1)},
+  {l:'Adj. defense',f:t=>t.de.toFixed(1)}]},
+ {g:'Strength of results',rows:[
+  {l:'Vs. Power 5',f:t=>t.p5?rec(t.p5):'—'},
+  {l:'Vs. top 50',f:t=>t.t50?rec(t.t50):'—'},
+  {l:'Best win (opp. Torvik rank)',f:t=>fmtRk(bestWin(t))},
+  {l:'Worst loss (opp. Torvik rank)',f:t=>fmtRk(worstLoss(t))}]},
+ {g:'Average margin of victory',rows:[
+  {l:'Vs. top 75',f:t=>movFmt(t.mov75)},
+  {l:'Vs. all others',f:t=>movFmt(t.movN)}]},
+ {g:'Trajectory',rows:[
+  {l:'Trend, last 10',f:t=>trendFmt(t.trend)},
+  {l:'Games in log',f:t=>`${t.g.length} of ${t.w+t.l}`}]},
+ {g:'Style',rows:[
+  {l:'Adj. tempo',f:t=>t.tempo.toFixed(1)}]}
+];
+
+/* Metrics the voting profile tracks. low = smaller is better. */
+const METRICS=[
+ {k:'Adj. offense',get:t=>t.oe,low:false},
+ {k:'Adj. defense',get:t=>t.de,low:true},
+ {k:'Wins Above Bubble',get:t=>t.wab,low:false},
+ {k:'Win percentage',get:t=>t.w/(t.w+t.l),low:false},
+ {k:'Losses',get:t=>t.l,low:true},
+ {k:'Record vs Power 5',get:t=>t.p5&&(t.p5[0]+t.p5[1])?t.p5[0]/(t.p5[0]+t.p5[1]):null,low:false},
+ {k:'Recent trend',get:t=>t.trend==null?null:t.trend,low:false},
+ {k:'Record vs top 50',get:t=>t.t50&&(t.t50[0]+t.t50[1])?t.t50[0]/(t.t50[0]+t.t50[1]):null,low:false},
+ {k:'Best win',get:t=>bestWin(t),low:true},
+ {k:'Worst loss',get:t=>worstLoss(t),low:true},
+ {k:'Margin vs top 75',get:t=>t.mov75?t.mov75[0]:null,low:false},
+ {k:'Margin vs all others',get:t=>t.movN?t.movN[0]:null,low:false}
+];
+
+/* ---------- OPTIONAL EXTRA DATA ----------
+   Lines of: Team,P5 wins,P5 losses,Trend   (trend = recent adjusted margin minus season margin, per 100 poss.)
+   Leave a cell empty to skip it. A header line is fine. */
+const XKEY='cbb-blind-resume-extra-v1';
+let xStatus='';
+function applyExtra(text){
+  let ok=0,miss=[];
+  const norm=x=>x.toLowerCase().replace(/[^a-z0-9]/g,'');
+  const byName=new Map(TEAMS.map(t=>[norm(t.name),t]));
+  text.split(/\r?\n/).forEach(ln=>{
+    const c=ln.split(',').map(x=>x.trim()); if(c.length<2||!c[0])return;
+    const t=byName.get(norm(c[0])); if(!t){ if(/\d/.test(c.slice(1).join(''))) miss.push(c[0]); return; }
+    const w=c[1]===''?NaN:+c[1], l=c[2]===undefined||c[2]===''?NaN:+c[2], tr=c[3]===undefined||c[3]===''?NaN:+c[3];
+    let hit=false;
+    if(!isNaN(w)&&!isNaN(l)){t.p5=[w,l];hit=true;}
+    if(!isNaN(tr)){t.trend=tr;hit=true;}
+    if(hit)ok++;
+  });
+  xStatus=`Loaded ${ok} team${ok===1?'':'s'}.`+(miss.length?` Not matched: ${miss.slice(0,6).join(', ')}${miss.length>6?'…':''}.`:'');
+  return ok;
+}
+try{const x=localStorage.getItem(XKEY); if(x)applyExtra(x);}catch(e){}
+
+/* ---------- GAME RESULTS CALCULATOR ----------
+   One game per line: Team,Opponent,TeamScore,OppScore  (list each game once, oldest first).
+   Computes record vs Power 5 and top 50, margin vs top 75 / others, and trend
+   (average margin over the last 10 games minus the season average, needs 8+ games). */
+/* Daily log of finals, appended by a scheduled task. Format: Team,Opponent,TeamScore,OppScore,gameId (oldest first; new games go just above the marker line)
+   Use Torvik names for teams in the ratings list; any other school keeps its plain name. */
+const SEED_GAMES=`{{GAMES}}`;
+const GKEY='cbb-blind-resume-games-v1';
+const P5CONF=new Set(['ACC','B10','B12','SEC','BE']);
+let gStatus='';
+const nrm=x=>x.toLowerCase().replace(/\bstate\b/g,'st').replace(/[^a-z0-9]/g,'');
+function findTeam(name){ const k=nrm(name); return TEAMS.find(t=>nrm(t.name)===k)||null; }
+function applyGames(text){
+  TEAMS.forEach(t=>{t.g=[];t.w=t.w0;t.l=t.l0;});
+  let games=0,skipped=0,outside=0,unknown=new Set(),ids=new Set();
+  text.split(/\r?\n/).forEach(ln=>{
+    const c=ln.split(',').map(x=>x.trim()); if(c.length<4)return;
+    const sa=parseFloat(c[2]), sb=parseFloat(c[3]); if(isNaN(sa)||isNaN(sb)){return;}
+    if(c[4]){ if(ids.has(c[4]))return; ids.add(c[4]); }
+    const a=findTeam(c[0]), b=findTeam(c[1]);
+    if(!a&&!b){skipped++;return;}
+    games++; if(!a)unknown.add(c[0]); if(!b)unknown.add(c[1]);
+    const post=false;  /* the site's data already has current records */
+    if(a){a.g.push({o:b,m:sa-sb}); if(post){sa>sb?a.w++:a.l++;}}
+    if(b){b.g.push({o:a,m:sb-sa}); if(post){sb>sa?b.w++:b.l++;}}
+  });
+  const avg=a=>a.length?a.reduce((x,y)=>x+y,0)/a.length:null;
+  let teams=0;
+  TEAMS.forEach(t=>{
+    if(!t.g.length)return; teams++;
+    const rr=f=>{let w=0,l=0;t.g.forEach(x=>{if(f(x.o)){x.m>0?w++:l++;}});return [w,l];};
+    t.p5=rr(o=>o&&P5CONF.has(o.conf));
+    t.t50=rr(o=>o&&o.rk<=50);
+    const top=t.g.filter(x=>x.o&&x.o.rk<=75).map(x=>x.m), rest=t.g.filter(x=>!(x.o&&x.o.rk<=75)).map(x=>x.m);
+    t.mov75=top.length?[avg(top),top.length]:null;
+    t.movN=rest.length?[avg(rest),rest.length]:null;
+    if(t.g.length>=8){const all=t.g.map(x=>x.m); t.trend=avg(all.slice(-10))-avg(all);}
+  });
+  const un=[...unknown];
+  gStatus=`Read ${games} game${games===1?'':'s'} for ${teams} team${teams===1?'':'s'}.`+(un.length?` Opponents not found in the ratings list (counted as outside the top 75): ${un.slice(0,5).join(', ')}${un.length>5?'…':''}.`:'')+(skipped?` ${skipped} line${skipped===1?'':'s'} matched no team.`:'');
+  return games;
+}
+let userGames='';
+try{userGames=localStorage.getItem(GKEY)||'';}catch(e){}
+applyGames(SEED_GAMES+'\n'+userGames);
+
+/* ---------- STATE ---------- */
+/* Teams are ranked in loss pools: 0 losses, 1 loss, 2 losses, 3+ losses. Groups of three are drawn
+   from one pool at a time, and a team with fewer losses always ranks above a team with more.
+   Each vote is {t:pool, r:[best,second,third]} or {t:pool, x:[a,b,c]} for "too close". */
+let votes=[], eloT=[{},{},{},{}], playsT=[{},{},{},{}], seen=new Set(), cur=null, picks=[], tab='compare';
+let boost=new Set(), drop=new Set();  /* boost: a rating bonus; drop: team removed from consideration */
+const BOOST=50;
+const KEY='cbb-blind-resume-torvik-v3';
+const NEED=3, RANKS=['1st','2nd','3rd'], TIER_NAMES=['0 losses','1 loss','2 losses','3 or more losses'];
+const tierOf=t=>Math.min(t.l,3);
+try{const s=JSON.parse(localStorage.getItem(KEY)||'null'); if(s&&Array.isArray(s.votes)&&s.n===TEAMS.length){votes=s.votes;boost=new Set(s.boost||[]);drop=new Set(s.drop||[]);}}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify({n:TEAMS.length,votes,boost:[...boost],drop:[...drop]}));}catch(e){}}
+
+function rebuild(){
+  eloT=[{},{},{},{}];playsT=[{},{},{},{}];seen=new Set();
+  for(let k=0;k<4;k++)TEAMS.forEach(t=>{eloT[k][t.id]=1500;playsT[k][t.id]=0;});
+  const upd=(k,w,l,sw,K)=>{const ew=eloT[k][w],el=eloT[k][l],exp=1/(1+Math.pow(10,(el-ew)/400));
+    eloT[k][w]=ew+K*(sw-exp); eloT[k][l]=el+K*((1-sw)-(1-exp));};
+  votes.forEach(v=>{
+    const k=v.t, ids=v.r||v.x; if(!ids)return;
+    if(v.r){ upd(k,ids[0],ids[1],1,24); upd(k,ids[0],ids[2],1,24); upd(k,ids[1],ids[2],1,24); }
+    else { upd(k,ids[0],ids[1],.5,8); upd(k,ids[0],ids[2],.5,8); upd(k,ids[1],ids[2],.5,8); }
+    ids.forEach(i=>playsT[k][i]++);
+    [[0,1],[0,2],[1,2]].forEach(([x,y])=>seen.add(k+':'+Math.min(ids[x],ids[y])+'-'+Math.max(ids[x],ids[y])));
+  });
+}
+/* Matching: a team is grouped with the teams closest to it in the user's own ranking for its pool.
+   Before a team has been compared, a hidden prior (WAB plus scoring margin) places it roughly,
+   and that prior fades as the user's picks accumulate. The prior never affects the Top 40. */
+const PRIOR={};
+(function(){
+  const z=f=>{const v=TEAMS.map(f),m=v.reduce((a,b)=>a+b,0)/v.length,sd=Math.sqrt(v.reduce((a,b)=>a+(b-m)*(b-m),0)/v.length)||1;return x=>(x-m)/sd;};
+  const zw=z(t=>t.wab), zm=z(t=>t.oe-t.de);
+  TEAMS.forEach(t=>{PRIOR[t.id]=120*(0.5*zw(t.wab)+0.5*zm(t.oe-t.de));});
+})();
+const POOL_MAX=50;  /* only teams in Bart Torvik's top 50 are compared */
+const tierPool=k=>TEAMS.filter(t=>t.rk<=POOL_MAX&&tierOf(t)===k&&!drop.has(t.id));
+const bonus=t=>boost.has(t.id)?BOOST:0;
+const pscore=(k,t)=>eloT[k][t.id]+bonus(t)+PRIOR[t.id]/(1+playsT[k][t.id]);
+function currentTier(){
+  for(let k=0;k<4;k++){const p=tierPool(k); if(p.length>=3&&p.some(t=>playsT[k][t.id]<NEED))return k;}
+  let best=0,bv=1e9;
+  for(let k=0;k<4;k++){const p=tierPool(k); if(p.length<3)continue; const v=p.reduce((a,t)=>a+playsT[k][t.id],0)/p.length; if(v<bv){bv=v;best=k;}}
+  return best;
+}
+const pairKey=(k,x,y)=>k+':'+Math.min(x.id,y.id)+'-'+Math.max(x.id,y.id);
+function nextTriple(){
+  picks=[];
+  const k=currentTier(), pool=tierPool(k);
+  const min=Math.min(...pool.map(t=>playsT[k][t.id]));
+  const first=pool.filter(t=>playsT[k][t.id]<=min);
+  const a=first[Math.floor(Math.random()*first.length)];
+  const rest=pool.filter(t=>t.id!==a.id);
+  let c1=rest.filter(t=>!seen.has(pairKey(k,a,t))); if(c1.length<2)c1=rest;
+  c1=c1.map(t=>({t,d:Math.abs(pscore(k,t)-pscore(k,a))+Math.random()*15})).sort((x,y)=>x.d-y.d);
+  const b=c1[0].t;
+  let c2=rest.filter(t=>t.id!==b.id&&!seen.has(pairKey(k,a,t))&&!seen.has(pairKey(k,b,t))); if(!c2.length)c2=rest.filter(t=>t.id!==b.id);
+  c2=c2.map(t=>({t,d:Math.abs(pscore(k,t)-pscore(k,a))+Math.abs(pscore(k,t)-pscore(k,b))+Math.random()*15})).sort((x,y)=>x.d-y.d);
+  const c=c2[0].t;
+  const teams=[a,b,c].sort(()=>Math.random()-.5);
+  cur={tier:k,teams};
+}
+function pick(i){
+  if(!cur)return; const id=cur.teams[i].id; if(picks.includes(id))return;
+  picks.push(id);
+  if(picks.length===2){
+    const third=cur.teams.find(t=>!picks.includes(t.id));
+    votes.push({t:cur.tier,r:[picks[0],picks[1],third.id]}); save(); rebuild(); nextTriple();
+  }
+  render();
+}
+function tooClose(){ if(!cur)return; votes.push({t:cur.tier,x:cur.teams.map(t=>t.id)}); save(); rebuild(); nextTriple(); render(); }
+function undo(){ if(picks.length){picks=[];render();return;} if(!votes.length)return; votes.pop(); save(); rebuild(); nextTriple(); render(); }
+function toggleBoost(id){ boost.has(id)?boost.delete(id):boost.add(id); save(); render(); }
+function dismiss(id){ drop.add(id); boost.delete(id); picks=[]; save(); nextTriple(); render(); }
+function restore(id){ drop.delete(id); save(); render(); }
+function reset(){ votes=[]; boost=new Set(); drop=new Set(); save(); rebuild(); nextTriple(); render(); }
+
+/* ---------- VIEWS ---------- */
+const $=id=>document.getElementById(id);
+function renderCompare(){
+  const k=cur.tier, T=cur.teams, n=votes.length, need=5, pool=tierPool(k), done=pool.filter(t=>playsT[k][t.id]>=NEED).length;
+  let h=`<div class="progress"><span>${n} group${n===1?'':'s'} ranked</span><div class="bar"><i style="width:${Math.min(100,n/need*100)}%"></i></div><span>${n>=need?'Top 40 unlocked':'Top 40 unlocks at '+need}</span></div>
+  <p class="pool">Ranking teams with <b>${TIER_NAMES[k]}</b> · ${done} of ${pool.length} teams done</p>
+  <h2 class="q">Rank these three resumes</h2>
+  <div class="board tri">
+   <div class="head"><div class="mid">RESUME</div>${T.map((t,i)=>{const pi=picks.indexOf(t.id);return `<div class="${pi>=0?'sel':''}">Team ${'ABC'[i]}<small>${t.code}${pi>=0?' · '+RANKS[pi]:''}</small></div>`;}).join('')}</div>`;
+  GROUPS.forEach(gr=>{
+    h+=`<div class="grp">${gr.g}</div>`;
+    gr.rows.forEach(r=>{h+=`<div class="row"><div class="l">${r.l}</div>${T.map(t=>`<div class="v">${r.f(t)}</div>`).join('')}</div>`;});
+  });
+  h+=`<div class="vote"><div></div>${T.map((t,i)=>{const pi=picks.indexOf(t.id);return pi>=0?`<button class="btn picked" disabled>${RANKS[pi]}</button>`:`<button class="btn pick" data-pick="${i}">Pick ${RANKS[picks.length]}</button>`;}).join('')}</div>
+  <div class="flags"><div class="l">Team tools</div>${T.map(t=>`<div class="fl"><button class="mini ${boost.has(t.id)?'on':''}" data-act="boost" data-id="${t.id}">${boost.has(t.id)?'★ Boosted':'☆ Boost'}</button><button class="mini" data-act="drop" data-id="${t.id}">Don't consider</button></div>`).join('')}</div></div>
+  <p class="hint" style="margin-top:10px">Click the strongest resume first, then the second strongest. The last one ranks third. Boost gives a team a rating bonus. Don't consider removes it from your rankings.</p>
+  <div class="tools"><button class="btn ghost" data-act="close">All three too close</button><button class="btn ghost" data-act="undo" ${(n||picks.length)?'':'disabled'}>${picks.length?'Clear my pick':'Undo last'}</button><button class="btn ghost" data-act="skip">Skip group</button><span class="hint">Keys: 1, 2, 3 pick Team A, B, C</span></div>`;
+  $('view-compare').innerHTML=h;
+}
+function renderRank(){
+  const el=$('view-rank');
+  if(votes.length<5){el.innerHTML=`<div class="empty">Rank ${5-votes.length} more group${5-votes.length===1?'':'s'} to see your Top 40.</div>`;return;}
+  const seenT=TEAMS.filter(t=>playsT[tierOf(t)][t.id]>0&&!drop.has(t.id));
+  const list=seenT.sort((a,b)=>tierOf(a)-tierOf(b)||(eloT[tierOf(b)][b.id]+bonus(b))-(eloT[tierOf(a)][a.id]+bonus(a))).slice(0,40);
+  let h=`<div class="tools" style="margin:0 0 12px"><span class="hint">${votes.length} groups ranked · ${seenT.length} teams seen</span></div>
+  <div class="scroll"><table><thead><tr><th>#</th><th>Team</th><th>Conf</th><th>Record</th><th>WAB</th><th>Torvik</th><th></th></tr></thead><tbody>`;
+  let last=-1;
+  list.forEach((t,i)=>{
+    if(tierOf(t)!==last){last=tierOf(t);h+=`<tr class="tiers"><td colspan="7">${TIER_NAMES[last]}</td></tr>`;}
+    h+=`<tr><td class="rk">${i+1}</td><td><b>${t.name}</b></td><td>${t.conf}</td><td class="n">${rec([t.w,t.l])}</td><td class="n">${sg(t.wab)}</td><td class="n">${t.rk}</td><td><button class="mini ${boost.has(t.id)?'on':''}" data-act="boost" data-id="${t.id}">${boost.has(t.id)?'★ Boosted':'☆ Boost'}</button> <button class="mini" data-act="drop" data-id="${t.id}">Remove</button></td></tr>`;
+  });
+  h+=`</tbody></table></div><p class="hint" style="margin-top:10px">A team with fewer losses always ranks above a team with more. Within each pool, order comes from an Elo score built from your picks, plus a small bonus for boosted teams. A team that takes a loss moves to the next pool.</p>`;
+  const gone=[...drop].map(i=>TEAMS[i]);
+  if(gone.length)h+=`<div class="card" style="margin-top:14px"><h2>Not considered (${gone.length})</h2><p>${gone.map(t=>`${t.name} <button class="mini" data-act="restore" data-id="${t.id}">Restore</button>`).join(' &nbsp; ')}</p></div>`;
+  el.innerHTML=h;
+}
+function renderLens(){
+  const el=$('view-lens'), dec=[]; votes.forEach(v=>{if(v.r){dec.push({w:v.r[0],l:v.r[1]},{w:v.r[0],l:v.r[2]},{w:v.r[1],l:v.r[2]});}});
+  if(dec.length<8){el.innerHTML=`<div class="empty">Your profile needs ${8-dec.length} more head-to-head result${8-dec.length===1?'':'s'}. Each ranked group of three gives three.</div>`;return;}
+  const res=METRICS.map(m=>{
+    let n=0,ok=0;
+    dec.forEach(v=>{
+      const win=TEAMS[v.w], lose=TEAMS[v.l];
+      const x=m.get(win), y=m.get(lose); if(x==null||y==null||x===y)return; n++;
+      if(m.low? x<y : x>y)ok++;
+    });
+    return {k:m.k,n,p:n?ok/n:.5};
+  }).filter(r=>r.n>=5).sort((a,b)=>b.p-a.p);
+  const top=res.slice(0,3).map(r=>r.k.toLowerCase());
+  let h=`<div class="card"><h2>What you reward</h2><p>You most often side with the team that has the better ${top[0]}, then ${top[1]} and ${top[2]}.</p><p class="hint">Based on ${dec.length} head-to-head results from your ranked groups. The line in each bar is 50%, meaning the metric made no difference to your vote.</p></div><div class="lens">`;
+  res.forEach(r=>{h+=`<div class="it"><span>${r.k}</span><div class="track"><i style="width:${(r.p*100).toFixed(0)}%"></i></div><span class="p">${(r.p*100).toFixed(0)}%</span></div>`;});
+  h+=`</div>`;
+  el.innerHTML=h;
+}
+function renderAbout(){
+  $('view-about').innerHTML=`
+  <div class="card"><h2>The idea</h2><p>Every team shows up as an anonymous resume. You rank groups of three by how tournament-worthy they look. Reputation and jersey colors stay out of it.</p></div>
+  <div class="card"><h2>What is on a resume</h2><p>Record, record against the top 50 and Power 5, best win and worst loss (as the opponent's Torvik rank), margin of victory, Wins Above Bubble, adjusted offense and defense per 100 possessions, and adjusted tempo. Torvik's overall rank and rating are left off so you build your own view. Your Top 40 always shows each team's name, conference and Torvik rank.</p></div>
+  <div class="card"><h2>What is missing</h2><p>Barttorvik does not publish NET, Quad records or strength of schedule, so those are not on the card. Wins Above Bubble is the closest measure of what a team has earned so far. Adding the NCAA team sheet would fill that gap.</p></div>
+  <div class="card"><h2>How your Top 40 is built</h2><p>Only teams in Bart Torvik's top 50 are included. Teams are ranked in pools by number of losses. You rank the undefeated teams against each other first, then the teams with one loss, and so on. A team with fewer losses always ranks above a team with more, and a team that takes a loss moves down into the next pool. Each group of three is built from the teams closest to each other in your own ranking, so every choice is a close call. Picking 1st and 2nd gives the third spot automatically. Each ranked group moves the teams on an Elo-style scale, and "All three too close" moves them only slightly. Boost adds a small rating bonus to a team you think deserves more credit, and Don't consider removes a team from your rankings for good, with a Restore button on the Top 40 tab. New teams get a rough starting placement from their record and scoring margin that fades as you make picks and never changes your Top 40.</p></div>
+  <div class="card"><h2>Vs. Power 5 and Trend</h2><p>Vs. Power 5 is a team's record against Power 5 opponents. Trend is the change in a team's adjusted efficiency margin over its last 10 games compared with its full season, so ▲ means improving and ▼ means slipping. Every stat from game results shows a dash until data is loaded. Use the game calculator below, or this box if you already have the numbers.</p>
+  <p>Paste one team per line as <code>Team,P5 wins,P5 losses,Trend</code>. Team names must match the names in My Top 40, and any cell can be left empty.</p>
+  <textarea id="xdata" rows="6" style="width:100%;font:13px var(--mono);background:var(--soft);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:8px" placeholder="Duke,2,1,+1.8&#10;Kansas,1,0,-0.6"></textarea>
+  <div class="tools"><button class="btn" data-act="loadx">Load data</button><span class="hint" id="xstat">${xStatus}</span></div></div>
+  <div class="card"><h2>Game results calculator</h2><p>Game-based stats cover only the games in the log, shown on each card as "Games in log". Final scores are added automatically every day. To add a game that is missing, paste it here. Format: one per line, as <code>Team,Opponent,TeamScore,OppScore</code>. List each game once, oldest first. Anything you paste is added to the automatic log. The page fills in Vs. Power 5 (ACC, Big Ten, Big 12, SEC, Big East), Vs. top 50, margin of victory against the top 75 and against everyone else, and Trend, using the Torvik ranks already loaded. Trend here is average margin over the last 10 games minus the season average.</p>
+  <textarea id="gdata" rows="6" style="width:100%;font:13px var(--mono);background:var(--soft);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:8px" placeholder="Duke,Kansas,78,74&#10;Houston,Florida,70,71"></textarea>
+  <div class="tools"><button class="btn" data-act="loadg">Calculate</button><span class="hint" id="gstat">${gStatus}</span></div></div>
+  <div class="card"><h2>Data timing</h2><p>Ratings and scores update automatically every day. Last update: {{UPDATED}}. Early in the season, ratings can swing a lot.</p></div>
+  <div class="tools"><button class="btn ghost" data-act="reset">Clear my picks</button></div>`;
+}
+function render(){
+  ['compare','rank','lens','about'].forEach(t=>{
+    $('view-'+t).hidden=tab!==t; $('tab-'+t).setAttribute('aria-selected',tab===t);
+  });
+  if(tab==='compare')renderCompare();
+  if(tab==='rank')renderRank();
+  if(tab==='lens')renderLens();
+  if(tab==='about')renderAbout();
+}
+
+/* ---------- EVENTS ---------- */
+document.addEventListener('click',e=>{
+  const t=e.target.closest('[data-tab],[data-pick],[data-act]'); if(!t)return;
+  if(t.dataset.tab){tab=t.dataset.tab;render();}
+  else if(t.dataset.pick!==undefined)pick(+t.dataset.pick);
+  else if(t.dataset.act==='undo')undo();
+  else if(t.dataset.act==='close')tooClose();
+  else if(t.dataset.act==='skip'){nextTriple();render();}
+  else if(t.dataset.act==='reset')reset();
+  else if(t.dataset.act==='boost')toggleBoost(+t.dataset.id);
+  else if(t.dataset.act==='drop')dismiss(+t.dataset.id);
+  else if(t.dataset.act==='restore')restore(+t.dataset.id);
+  else if(t.dataset.act==='loadg'){const v=$('gdata').value; userGames=v; applyGames(SEED_GAMES+'\n'+v); try{localStorage.setItem(GKEY,v);}catch(e){} $('gstat').textContent=gStatus;}
+  else if(t.dataset.act==='loadx'){const v=$('xdata').value; if(applyExtra(v)){try{localStorage.setItem(XKEY,v);}catch(e){}} $('xstat').textContent=xStatus;}
+});
+document.addEventListener('keydown',e=>{
+  if(tab!=='compare'||e.target.matches('input,textarea'))return;
+  if(e.key==='1')pick(0); else if(e.key==='2')pick(1); else if(e.key==='3')pick(2);
+});
+
+rebuild(); nextTriple(); render();
+</script>
+</body>
+</html>
