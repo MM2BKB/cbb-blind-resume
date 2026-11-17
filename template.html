@@ -55,6 +55,7 @@ body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
 .btn{transition:box-shadow .2s,background .2s,color .2s,transform .1s}
 .btn:hover{box-shadow:0 0 14px var(--glow-soft)}
 .btn:active{transform:scale(.97)}
+.h2h{margin-top:12px;margin-bottom:0}.h2h ul{margin:0;padding-left:20px}.h2h li{margin:2px 0}
 .btn.pick{box-shadow:0 0 12px var(--glow),0 0 28px var(--glow-soft)}
 .btn.pick:hover{box-shadow:0 0 18px var(--glow),0 0 40px var(--glow-soft)}
 .tri .head .sel{text-shadow:0 0 10px var(--glow)}
@@ -313,6 +314,8 @@ const tierOf=t=>0;  /* one pool: every team in the top 50 is compared against ev
 try{const s=JSON.parse(localStorage.getItem(KEY)||'null'); if(s&&Array.isArray(s.votes)&&s.n===TEAMS.length){votes=s.votes;boost=new Set(s.boost||[]);drop=new Set(s.drop||[]);}}catch(e){}
 function save(){try{localStorage.setItem(KEY,JSON.stringify({n:TEAMS.length,votes,boost:[...boost],drop:[...drop]}));}catch(e){}}
 
+/* head-to-head: results of games the compared teams played against each other */
+const h2h=(a,b)=>(a.g||[]).filter(x=>x.o===b).map(x=>x.m);
 function rebuild(){
   eloT=[{},{},{},{}];playsT=[{},{},{},{}];seen=new Set();
   for(let k=0;k<4;k++)TEAMS.forEach(t=>{eloT[k][t.id]=1500;playsT[k][t.id]=0;});
@@ -324,6 +327,13 @@ function rebuild(){
     else { upd(k,ids[0],ids[1],.5,8); upd(k,ids[0],ids[2],.5,8); upd(k,ids[1],ids[2],.5,8); }
     ids.forEach(i=>playsT[k][i]++);
     [[0,1],[0,2],[1,2]].forEach(([x,y])=>seen.add(k+':'+Math.min(ids[x],ids[y])+'-'+Math.max(ids[x],ids[y])));
+  });
+  /* weigh head-to-head results: every game two pool teams played against each other nudges the winner up
+     (smaller than a pick: K 8 to 13 depending on the margin, versus 24 for a pick) */
+  TEAMS.forEach(a=>{ if(a.rk>POOL_MAX)return;
+    (a.g||[]).forEach(x=>{ const b=x.o; if(!b||b.rk>POOL_MAX||b.id<a.id||x.m===0)return;
+      const K=8+Math.min(Math.abs(x.m),20)*0.25;
+      if(x.m>0)upd(0,a.id,b.id,1,K); else upd(0,b.id,a.id,1,K); });
   });
 }
 /* Matching: a team is grouped with the teams closest to it in the user's own ranking for its pool.
@@ -380,6 +390,16 @@ function reset(){ votes=[]; boost=new Set(); drop=new Set(); save(); rebuild(); 
 
 /* ---------- VIEWS ---------- */
 const $=id=>document.getElementById(id);
+function h2hBlock(T){
+  const lines=[];
+  [[0,1],[0,2],[1,2]].forEach(([i,j])=>{
+    h2h(T[i],T[j]).forEach(m=>{
+      const w=m>0?i:j, l=m>0?j:i;
+      lines.push(`<li><b>Team ${'ABC'[w]}</b> beat <b>Team ${'ABC'[l]}</b> by ${Math.abs(m)}</li>`);
+    });
+  });
+  return `<div class="card h2h"><h2>Head to head</h2>`+(lines.length?`<ul>${lines.join('')}</ul>`:`<p class="hint">None of these three have played each other this season.</p>`)+`</div>`;
+}
 function renderCompare(){
   const k=cur.tier, T=cur.teams, n=votes.length, need=5, pool=tierPool(k), done=pool.filter(t=>playsT[k][t.id]>=NEED).length;
   let h=`<div class="progress"><span>${n} group${n===1?'':'s'} ranked</span><div class="bar"><i style="width:${Math.min(100,n/need*100)}%"></i></div><span>${n>=need?'Top 40 unlocked':'Top 40 unlocks at '+need}</span></div>
@@ -393,6 +413,7 @@ function renderCompare(){
   });
   h+=`<div class="vote"><div></div>${T.map((t,i)=>{const pi=picks.indexOf(t.id);return pi>=0?`<button class="btn picked" disabled>${RANKS[pi]}</button>`:`<button class="btn pick" data-pick="${i}">Pick ${RANKS[picks.length]}</button>`;}).join('')}</div>
   <div class="flags"><div class="l">Team tools</div>${T.map(t=>`<div class="fl"><button class="mini ${boost.has(t.id)?'on':''}" data-act="boost" data-id="${t.id}">${boost.has(t.id)?'★ Boosted':'☆ Boost'}</button><button class="mini" data-act="drop" data-id="${t.id}">Don't consider</button></div>`).join('')}</div></div>
+  ${h2hBlock(T)}
   <p class="hint" style="margin-top:10px">Click the strongest resume first, then the second strongest. The last one ranks third. Boost gives a team a rating bonus. Don't consider removes it from your rankings.</p>
   <div class="tools"><button class="btn ghost" data-act="close">All three too close</button><button class="btn ghost" data-act="undo" ${(n||picks.length)?'':'disabled'}>${picks.length?'Clear my pick':'Undo last'}</button><button class="btn ghost" data-act="skip">Skip group</button><span class="hint">Keys: 1, 2, 3 pick Team A, B, C</span></div>`;
   $('view-compare').innerHTML=h;
@@ -435,7 +456,7 @@ function renderAbout(){
   <div class="card"><h2>The idea</h2><p>Every team shows up as an anonymous resume. You rank groups of three by how tournament-worthy they look. Reputation and jersey colors stay out of it.</p></div>
   <div class="card"><h2>What is on a resume</h2><p>Record, record against the top 50 and Power 5, best win and worst loss (as the opponent's Torvik rank), margin of victory, Wins Above Bubble, adjusted offense and defense per 100 possessions, and adjusted tempo. Torvik's overall rank and rating are left off so you build your own view. Your Top 40 always shows each team's name, conference and Torvik rank.</p></div>
   <div class="card"><h2>What is missing</h2><p>Barttorvik does not publish NET, Quad records or strength of schedule, so those are not on the card. Wins Above Bubble is the closest measure of what a team has earned so far. Adding the NCAA team sheet would fill that gap.</p></div>
-  <div class="card"><h2>How your Top 40 is built</h2><p>Only teams in Bart Torvik's top 50 are included. All of those teams are in one pool, so a 0-loss team, a 1-loss team and a 2-loss team can all show up in the same group, and your picks decide the order. Each group of three is built from the teams closest to each other in your own ranking, so every choice is a close call. Picking 1st and 2nd gives the third spot automatically. Each ranked group moves the teams on an Elo-style scale, and "All three too close" moves them only slightly. Boost adds a small rating bonus to a team you think deserves more credit, and Don't consider removes a team from your rankings for good, with a Restore button on the Top 40 tab. New teams get a rough starting placement from their record and scoring margin that fades as you make picks and never changes your Top 40.</p></div>
+  <div class="card"><h2>How your Top 40 is built</h2><p>Only teams in Bart Torvik's top 50 are included. All of those teams are in one pool, so a 0-loss team, a 1-loss team and a 2-loss team can all show up in the same group, and your picks decide the order. Each group of three is built from the teams closest to each other in your own ranking, so every choice is a close call. Picking 1st and 2nd gives the third spot automatically. If two teams in a group have played each other, the result and margin are shown, and every head-to-head game between top-50 teams also gives the winner a smaller push in the ranking than a pick does. Each ranked group moves the teams on an Elo-style scale, and "All three too close" moves them only slightly. Boost adds a small rating bonus to a team you think deserves more credit, and Don't consider removes a team from your rankings for good, with a Restore button on the Top 40 tab. New teams get a rough starting placement from their record and scoring margin that fades as you make picks and never changes your Top 40.</p></div>
   <div class="card"><h2>Vs. Power 5 and Trend</h2><p>Vs. Power 5 is a team's record against Power 5 opponents. Trend is the change in a team's adjusted efficiency margin over its last 10 games compared with its full season, so ▲ means improving and ▼ means slipping. Every stat from game results shows a dash until data is loaded. Use the game calculator below, or this box if you already have the numbers.</p>
   <p>Paste one team per line as <code>Team,P5 wins,P5 losses,Trend</code>. Team names must match the names in My Top 40, and any cell can be left empty.</p>
   <textarea id="xdata" rows="6" style="width:100%;font:13px var(--mono);background:var(--soft);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:8px" placeholder="Duke,2,1,+1.8&#10;Kansas,1,0,-0.6"></textarea>
@@ -468,7 +489,7 @@ document.addEventListener('click',e=>{
   else if(t.dataset.act==='boost')toggleBoost(+t.dataset.id);
   else if(t.dataset.act==='drop')dismiss(+t.dataset.id);
   else if(t.dataset.act==='restore')restore(+t.dataset.id);
-  else if(t.dataset.act==='loadg'){const v=$('gdata').value; userGames=v; applyGames(SEED_GAMES+'\n'+v); try{localStorage.setItem(GKEY,v);}catch(e){} $('gstat').textContent=gStatus;}
+  else if(t.dataset.act==='loadg'){const v=$('gdata').value; userGames=v; applyGames(SEED_GAMES+'\n'+v); rebuild(); try{localStorage.setItem(GKEY,v);}catch(e){} $('gstat').textContent=gStatus;}
   else if(t.dataset.act==='loadx'){const v=$('xdata').value; if(applyExtra(v)){try{localStorage.setItem(XKEY,v);}catch(e){}} $('xstat').textContent=xStatus;}
 });
 document.addEventListener('keydown',e=>{
