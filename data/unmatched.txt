@@ -5,178 +5,93 @@ Alabama A&M
 Alabama State
 Alcorn State
 American University
-Arkansas State
 Arkansas-Pine Bluff
-Army
-Austin Peay
-Bellarmine
 Bethune-Cookman
-Binghamton
 Boston University
-Bradley
-Brown
 Buffalo
 Cal Poly
 Cal State Bakersfield
 Calumet St. Joseph
-Campbell
 Canisius
 Capital
 Central Arkansas
 Central Connecticut
-Central Michigan
-Charleston Southern
-Cheyney (PA)
 Chicago State
 Cleveland State
 Coastal Carolina
-Coastal Georgia
 Colgate
 Colorado Colorado Springs
 Columbia
-Coppin State
 Dallas Christian
 Dartmouth
 DeSales
 Delaware
-Delaware State
 Denver
-Detroit Mercy
-Dillard
 Doane
-Drexel
-Earlham
-East Carolina
 East Texas A&M
 Eastern Illinois
 Eastern Kentucky
 Ecclesia
 Emmanuel (MA)
-Evansville
-Fairfield
 Ferrum
 Fisk
 Florida A&M
 Florida Gulf Coast
 Florida Memorial
-Fresno State
-Gardner-Webb
 Georgia State
 Grambling
-Hampton
 Holy Cross
-IU Indianapolis
 Idaho State
-Indiana State
 Iona
-Jackson State
 Jacksonville
-Jacksonville State
 Kent State
-LSU New Orleans
 La Salle
-Lafayette
-Le Moyne
-Lincoln (CA)
-Lipscomb
-Little Rock
+Long Beach State
 Long Island University
-Longwood
-Louisiana Tech
-Loyola Maryland
-Maine
-Manhattan
-Marshall
 Mayville State
 Mercyhurst
 Miami (OH) Hamilton
 Midway
 Missouri State
 Montana
-Montreat
 Morehead State
-Morgan State
-NJIT
-Navy
 New Hampshire
 New Haven
 New Mexico State
 Niagara
-Nicholls
 Norfolk State
 North Alabama
-North Carolina A&T
 North Carolina Central
-North Dakota
 North Dakota State
-North Florida
-Northern Colorado
-Northern Illinois
-Northern Kentucky
-Northwest University
-Northwestern State
-Oakland
-Oklahoma City
-Old Dominion
-Oral Roberts
-Plattsburgh
 Portland State
 Prairie View A&M
 Princeton
 Purdue Fort Wayne
-Queens University
 Quinnipiac
-Radford
-Rice
-Rider
 Robert Morris
 SE Louisiana
-Sacramento State
-San Francisco
 San José State
-Shenandoah
-Siena
-South Alabama
 South Carolina State
-South Carolina Upstate
 South Dakota
 South Dakota State
 Southeast Missouri State
 Southern Indiana
-Southern New Orleans
-Southern Utah
 St. Thomas
 Stetson
 Stillman
-Stonehill
 Tarleton State
 Tennessee Tech
+Texas Southern
 The Citadel
-Toledo
-Tulane
 UAlbany
-UC Davis
 UC Merced
-UC Riverside
 UL Monroe
 UMBC
-UNC Asheville
-UT Arlington
 UT Martin
-UT Rio Grande Valley
 UTEP
 UTSA
-Utah Tech
-Vermont
 Virginia Lynchburg
-Washington State
-Weber State
-West Georgia
-Western Carolina
 Western Illinois
 William & Mary
-Winthrop
-Wofford
 Wright State-Lake
 Yale
-Youngstown State
