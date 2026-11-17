@@ -302,15 +302,14 @@ try{userGames=localStorage.getItem(GKEY)||'';}catch(e){}
 applyGames(SEED_GAMES+'\n'+userGames);
 
 /* ---------- STATE ---------- */
-/* Teams are ranked in loss pools: 0 losses, 1 loss, 2 losses, 3+ losses. Groups of three are drawn
-   from one pool at a time, and a team with fewer losses always ranks above a team with more.
+/* All top-50 teams are ranked together in a single pool (loss count does not separate them).
    Each vote is {t:pool, r:[best,second,third]} or {t:pool, x:[a,b,c]} for "too close". */
 let votes=[], eloT=[{},{},{},{}], playsT=[{},{},{},{}], seen=new Set(), cur=null, picks=[], tab='compare';
 let boost=new Set(), drop=new Set();  /* boost: a rating bonus; drop: team removed from consideration */
 const BOOST=50;
 const KEY='cbb-blind-resume-torvik-v3';
-const NEED=3, RANKS=['1st','2nd','3rd'], TIER_NAMES=['0 losses','1 loss','2 losses','3 or more losses'];
-const tierOf=t=>Math.min(t.l,3);
+const NEED=3, RANKS=['1st','2nd','3rd'], TIER_NAMES=['all teams','','',''];
+const tierOf=t=>0;  /* one pool: every team in the top 50 is compared against every other, whatever its record */
 try{const s=JSON.parse(localStorage.getItem(KEY)||'null'); if(s&&Array.isArray(s.votes)&&s.n===TEAMS.length){votes=s.votes;boost=new Set(s.boost||[]);drop=new Set(s.drop||[]);}}catch(e){}
 function save(){try{localStorage.setItem(KEY,JSON.stringify({n:TEAMS.length,votes,boost:[...boost],drop:[...drop]}));}catch(e){}}
 
@@ -320,7 +319,7 @@ function rebuild(){
   const upd=(k,w,l,sw,K)=>{const ew=eloT[k][w],el=eloT[k][l],exp=1/(1+Math.pow(10,(el-ew)/400));
     eloT[k][w]=ew+K*(sw-exp); eloT[k][l]=el+K*((1-sw)-(1-exp));};
   votes.forEach(v=>{
-    const k=v.t, ids=v.r||v.x; if(!ids)return;
+    const k=0, ids=v.r||v.x;  /* older votes from the loss-pool version fold into the single pool */ if(!ids)return;
     if(v.r){ upd(k,ids[0],ids[1],1,24); upd(k,ids[0],ids[2],1,24); upd(k,ids[1],ids[2],1,24); }
     else { upd(k,ids[0],ids[1],.5,8); upd(k,ids[0],ids[2],.5,8); upd(k,ids[1],ids[2],.5,8); }
     ids.forEach(i=>playsT[k][i]++);
@@ -384,7 +383,7 @@ const $=id=>document.getElementById(id);
 function renderCompare(){
   const k=cur.tier, T=cur.teams, n=votes.length, need=5, pool=tierPool(k), done=pool.filter(t=>playsT[k][t.id]>=NEED).length;
   let h=`<div class="progress"><span>${n} group${n===1?'':'s'} ranked</span><div class="bar"><i style="width:${Math.min(100,n/need*100)}%"></i></div><span>${n>=need?'Top 40 unlocked':'Top 40 unlocks at '+need}</span></div>
-  <p class="pool">Ranking teams with <b>${TIER_NAMES[k]}</b> · ${done} of ${pool.length} teams done</p>
+  <p class="pool">Comparing <b>all teams</b>, whatever their record · ${done} of ${pool.length} teams done</p>
   <h2 class="q">Rank these three resumes</h2>
   <div class="board tri">
    <div class="head"><div class="mid">RESUME</div>${T.map((t,i)=>{const pi=picks.indexOf(t.id);return `<div class="${pi>=0?'sel':''}">Team ${'ABC'[i]}<small>${t.code}${pi>=0?' · '+RANKS[pi]:''}</small></div>`;}).join('')}</div>`;
@@ -402,15 +401,13 @@ function renderRank(){
   const el=$('view-rank');
   if(votes.length<5){el.innerHTML=`<div class="empty">Rank ${5-votes.length} more group${5-votes.length===1?'':'s'} to see your Top 40.</div>`;return;}
   const seenT=TEAMS.filter(t=>playsT[tierOf(t)][t.id]>0&&!drop.has(t.id));
-  const list=seenT.sort((a,b)=>tierOf(a)-tierOf(b)||(eloT[tierOf(b)][b.id]+bonus(b))-(eloT[tierOf(a)][a.id]+bonus(a))).slice(0,40);
+  const list=seenT.sort((a,b)=>(eloT[0][b.id]+bonus(b))-(eloT[0][a.id]+bonus(a))).slice(0,40);
   let h=`<div class="tools" style="margin:0 0 12px"><span class="hint">${votes.length} groups ranked · ${seenT.length} teams seen</span></div>
   <div class="scroll"><table><thead><tr><th>#</th><th>Team</th><th>Conf</th><th>Record</th><th>WAB</th><th>Torvik</th><th></th></tr></thead><tbody>`;
-  let last=-1;
   list.forEach((t,i)=>{
-    if(tierOf(t)!==last){last=tierOf(t);h+=`<tr class="tiers"><td colspan="7">${TIER_NAMES[last]}</td></tr>`;}
     h+=`<tr><td class="rk">${i+1}</td><td><b>${t.name}</b></td><td>${t.conf}</td><td class="n">${rec([t.w,t.l])}</td><td class="n">${sg(t.wab)}</td><td class="n">${t.rk}</td><td><button class="mini ${boost.has(t.id)?'on':''}" data-act="boost" data-id="${t.id}">${boost.has(t.id)?'★ Boosted':'☆ Boost'}</button> <button class="mini" data-act="drop" data-id="${t.id}">Remove</button></td></tr>`;
   });
-  h+=`</tbody></table></div><p class="hint" style="margin-top:10px">A team with fewer losses always ranks above a team with more. Within each pool, order comes from an Elo score built from your picks, plus a small bonus for boosted teams. A team that takes a loss moves to the next pool.</p>`;
+  h+=`</tbody></table></div><p class="hint" style="margin-top:10px">Every team is ranked against every other, so a team with a loss can rank above an undefeated one. Order comes from an Elo score built from your picks, plus a small bonus for boosted teams.</p>`;
   const gone=[...drop].map(i=>TEAMS[i]);
   if(gone.length)h+=`<div class="card" style="margin-top:14px"><h2>Not considered (${gone.length})</h2><p>${gone.map(t=>`${t.name} <button class="mini" data-act="restore" data-id="${t.id}">Restore</button>`).join(' &nbsp; ')}</p></div>`;
   el.innerHTML=h;
@@ -438,7 +435,7 @@ function renderAbout(){
   <div class="card"><h2>The idea</h2><p>Every team shows up as an anonymous resume. You rank groups of three by how tournament-worthy they look. Reputation and jersey colors stay out of it.</p></div>
   <div class="card"><h2>What is on a resume</h2><p>Record, record against the top 50 and Power 5, best win and worst loss (as the opponent's Torvik rank), margin of victory, Wins Above Bubble, adjusted offense and defense per 100 possessions, and adjusted tempo. Torvik's overall rank and rating are left off so you build your own view. Your Top 40 always shows each team's name, conference and Torvik rank.</p></div>
   <div class="card"><h2>What is missing</h2><p>Barttorvik does not publish NET, Quad records or strength of schedule, so those are not on the card. Wins Above Bubble is the closest measure of what a team has earned so far. Adding the NCAA team sheet would fill that gap.</p></div>
-  <div class="card"><h2>How your Top 40 is built</h2><p>Only teams in Bart Torvik's top 50 are included. Teams are ranked in pools by number of losses. You rank the undefeated teams against each other first, then the teams with one loss, and so on. A team with fewer losses always ranks above a team with more, and a team that takes a loss moves down into the next pool. Each group of three is built from the teams closest to each other in your own ranking, so every choice is a close call. Picking 1st and 2nd gives the third spot automatically. Each ranked group moves the teams on an Elo-style scale, and "All three too close" moves them only slightly. Boost adds a small rating bonus to a team you think deserves more credit, and Don't consider removes a team from your rankings for good, with a Restore button on the Top 40 tab. New teams get a rough starting placement from their record and scoring margin that fades as you make picks and never changes your Top 40.</p></div>
+  <div class="card"><h2>How your Top 40 is built</h2><p>Only teams in Bart Torvik's top 50 are included. All of those teams are in one pool, so a 0-loss team, a 1-loss team and a 2-loss team can all show up in the same group, and your picks decide the order. Each group of three is built from the teams closest to each other in your own ranking, so every choice is a close call. Picking 1st and 2nd gives the third spot automatically. Each ranked group moves the teams on an Elo-style scale, and "All three too close" moves them only slightly. Boost adds a small rating bonus to a team you think deserves more credit, and Don't consider removes a team from your rankings for good, with a Restore button on the Top 40 tab. New teams get a rough starting placement from their record and scoring margin that fades as you make picks and never changes your Top 40.</p></div>
   <div class="card"><h2>Vs. Power 5 and Trend</h2><p>Vs. Power 5 is a team's record against Power 5 opponents. Trend is the change in a team's adjusted efficiency margin over its last 10 games compared with its full season, so ▲ means improving and ▼ means slipping. Every stat from game results shows a dash until data is loaded. Use the game calculator below, or this box if you already have the numbers.</p>
   <p>Paste one team per line as <code>Team,P5 wins,P5 losses,Trend</code>. Team names must match the names in My Top 40, and any cell can be left empty.</p>
   <textarea id="xdata" rows="6" style="width:100%;font:13px var(--mono);background:var(--soft);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:8px" placeholder="Duke,2,1,+1.8&#10;Kansas,1,0,-0.6"></textarea>
