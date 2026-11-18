@@ -1,35 +1,20 @@
 Abilene Christian
-Abraham Baldwin Agricultural
-Air Force
-Alabama A&M
 Alabama State
 Alcorn State
-American University
-Arkansas-Pine Bluff
 Army
 Austin Peay
 Ball State
 Bellarmine
-Bethune-Cookman
-Boston University
 Bryant
 Bucknell
-Buffalo
-Cal Poly
-Cal State Bakersfield
 Cal State Northridge
 California Baptist
 Calumet St. Joseph
-Canisius
-Capital
 Central Arkansas
 Central Connecticut
 Central Michigan
 Cheyney (PA)
-Chicago State
 Cleveland State
-Coastal Carolina
-Colgate
 Colorado Colorado Springs
 Columbia
 Dallas Christian
@@ -38,36 +23,28 @@ DeSales
 Delaware
 Delaware State
 Denver
-Doane
 East Tennessee State
 East Texas A&M
 Eastern Illinois
 Eastern Kentucky
 Eastern Washington
-Ecclesia
 Embry Riddle (AZ)
-Emmanuel (MA)
 Evansville
 Ferrum
 Fisk
 Florida A&M
-Florida Gulf Coast
 Florida International
 Florida Memorial
 Fort Lauderdale
 Georgia Southern
-Georgia State
 Grambling
 Green Bay
 Hofstra
-Holy Cross
-Idaho State
 Iona
 Jacksonville
 Jacksonville State
 Kansas City
 Kent State
-La Salle
 Lamar
 Le Moyne
 Lehigh
@@ -85,7 +62,6 @@ Marshall
 Maryland Eastern Shore
 Massachusetts
 Mayville State
-Mercyhurst
 Miami (OH) Hamilton
 Midway
 Missouri State
@@ -93,17 +69,12 @@ Monmouth
 Montana
 Morehead State
 Mount St. Mary's
-New Hampshire
-New Haven
-New Mexico State
 Newman
-Niagara
 Nicholls
 Norfolk State
 North Alabama
 North Carolina Central
 North Dakota
-North Dakota State
 North Florida
 Northern Arizona
 Old Dominion
@@ -112,50 +83,36 @@ Oral Roberts
 Pacific Union
 Portland State
 Prairie View A&M
-Princeton
-Purdue Fort Wayne
-Quinnipiac
 Rice
 Rider
-Robert Morris
 SE Louisiana
 SIU Edwardsville
 SUNY Potsdam
 Sacred Heart
 Saint Peter's
-San José State
 Simon Fraser
 South Alabama
-South Carolina State
-South Dakota
 South Dakota State
 Southeast Missouri State
 Southern
 Southern Illinois
-Southern Indiana
 Southern Miss
 Spring Hill
 St. Thomas
 Stetson
-Stillman
 Stony Brook
 Tarleton State
 Tennessee State
-Tennessee Tech
 Texas A&M-Corpus Christi
 Texas Southern
 The Citadel
 Troy
-UAlbany
 UC Davis
-UC Merced
 UL Monroe
 UMBC
 UMass Lowell
 UT Arlington
-UT Martin
 UTEP
-UTSA
 Vermont State Lyndon
 Virginia Lynchburg
 Wagner
@@ -164,5 +121,3 @@ Western Carolina
 Western Illinois
 William & Mary
 Wilson
-Wright State-Lake
-Yale
