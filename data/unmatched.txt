@@ -1,123 +1,212 @@
-Abilene Christian
-Alabama State
-Alcorn State
-Army
-Austin Peay
-Ball State
-Bellarmine
-Bryant
-Bucknell
-Cal State Northridge
-California Baptist
+Abraham Baldwin Agricultural
+Adams State
+Albion
+Allen
+Alma
+American University
+Andrew
+Apprentice School
+Arkansas Monticello
+Baptist (Fl)
+Berry
+Bethesda
+Biola
+Blackburn
+Blue Mountain Christian
+Bob Jones
+Boyce
+Brescia
+Briar Cliff
+Bridgewater
+Bryant & Stratton-Albany
+Cal State San Marcos
 Calumet St. Joseph
-Central Arkansas
-Central Connecticut
-Central Michigan
+Cameron
+Campbellsville
+Capital
+Carnegie Mellon
+Centenary (LA)
+Central Bible
+Central College
+Central Penn
+Central State
+Centre
+Champion Christian
+Chapman
 Cheyney (PA)
-Cleveland State
+Chicago
+Christendom
+City College NY
+Clarke
+Coast Guard
+Coastal Georgia
+College of Biblical Studies
+Colorado College
 Colorado Colorado Springs
-Columbia
+Columbia International
+Concordia Chicago
+Corban
+Cornell (IA)
+Covenant
+Crookston (MN)
+Curry
 Dallas Christian
-Dartmouth
 DeSales
-Delaware
-Delaware State
-Denver
-East Tennessee State
-East Texas A&M
-Eastern Illinois
-Eastern Kentucky
-Eastern Washington
+Dillard
+Doane
+Earlham
+East West
+Ecclesia
+Elmira
 Embry Riddle (AZ)
-Evansville
+Emmanuel (MA)
+Erskine
+Eureka
 Ferrum
 Fisk
-Florida A&M
-Florida International
 Florida Memorial
 Fort Lauderdale
-Georgia Southern
+Fort Valley State
+Framingham State
+Franklin
+Fresno Pacific
+Friends
+George Fox
+Georgia Gwinnett
+Grace (CA)
 Grambling
-Green Bay
-Hofstra
-Iona
-Jacksonville
-Jacksonville State
+Great Lakes Christian
+Hiram
+Howard Payne
+IU Kokomo
+Jessup
+Johnson & Wales
+Kalamazoo
 Kansas City
-Kent State
-Lamar
-Le Moyne
-Lehigh
+Kentucky Christian
+Kentucky State
+Kentucky Wesleyan
+Keuka
+King's
+LSU New Orleans
+La Sierra
+La Verne
+LaGrange
+Lane College
+Lawrence
+Lees McRae
+Lewis & Clark
 Life University
-Lindenwood
-Lipscomb
-Long Beach State
+Lincoln (CA)
+Lincoln (MO)
+Livingstone
 Long Island University
 Louisiana Christian
-Louisiana Tech
+Loyola New Orleans
+Lyon
+MIT
+Macalester
 Maine Augusta
-Manhattan
-Marist
-Marshall
-Maryland Eastern Shore
-Massachusetts
+Mary Baldwin
+Maryville (MO)
 Mayville State
+McDaniel
+McNeese
+Menlo
 Miami (OH) Hamilton
+Miami (OH) Middletown
+Michigan Dearborn
+Mid America Christian
 Midway
-Missouri State
-Monmouth
-Montana
-Morehead State
-Mount St. Mary's
+Milligan
+Millsaps
+Misericordia
+Mississippi U for Women
+Monmouth (IL)
+Montreat
+Morris
+Mount Marty
+Mount Olive
+Mount St Mary
+Muskingum
+New College
+Newberry
 Newman
 Nicholls
-Norfolk State
-North Alabama
-North Carolina Central
-North Dakota
-North Florida
-Northern Arizona
-Old Dominion
+North American
+Northern New Mexico
+Northwest University
+Northwestern (OK)
+Notre Dame (MD)
+Oakwood
+Oklahoma City
+Oklahoma Panhandle
 Omaha
-Oral Roberts
+Ottawa (KS)
 Pacific Union
-Portland State
-Prairie View A&M
-Rice
-Rider
+Paul Quinn
+Penn State Lehigh Valley
+Penn State Schuylkill
+Penn State Shenango
+Pfeiffer
+Plattsburgh
+Queens University
+Randolph
+Regent
+Regis University
+Reinhardt
+Rhode Island College
+Ripon
+Rivier
+Roberts Wesleyan
 SE Louisiana
-SIU Edwardsville
+SUNY Old Westbury
 SUNY Potsdam
-Sacred Heart
-Saint Peter's
+Saint Mary of the Woods
+Saint Vincent
+Salish Kootenai
+San Francisco State
+San José State
+Schreiner
+Shenandoah
 Simon Fraser
-South Alabama
-South Dakota State
-Southeast Missouri State
-Southern
-Southern Illinois
-Southern Miss
+Simpson (IA)
+South Carolina Upstate
+Southeastern Baptist
+Southern New Orleans
+Southern Virginia
+Southern Wesleyan
+Southwestern Christian U
 Spring Hill
-St. Thomas
-Stetson
-Stony Brook
-Tarleton State
-Tennessee State
-Texas A&M-Corpus Christi
-Texas Southern
-The Citadel
-Troy
-UC Davis
-UL Monroe
-UMBC
-UMass Lowell
-UT Arlington
-UTEP
+St. Francis (IL)
+St. Joseph's Long Island
+St. Mary's (MD)
+Stanton
+Stillman
+Texas A&M-Kingsville
+Texas Lutheran
+Thomas College
+Tougaloo
+Trinity College of Jacksonville
+Truman State
+UAlbany
+UC Merced
+UNT Dallas
+UT Dallas
+Union (TN)
 Vermont State Lyndon
 Virginia Lynchburg
-Wagner
-West Florida
-Western Carolina
-Western Illinois
-William & Mary
+Viterbo
+Voorhees
+Warren Wilson
+Washington Maryland
+Webster
+West Coast Baptist
+Western Colorado
+Western New Mexico
+Whittier
+Willamette
+William Paterson
 Wilson
+Wright State-Lake
+York (NE)
