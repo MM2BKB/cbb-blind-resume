@@ -314,8 +314,24 @@ const BOOST=50;
 const KEY='cbb-blind-resume-torvik-v3';
 const NEED=3, RANKS=['1st','2nd','3rd'], TIER_NAMES=['all teams','','',''];
 const tierOf=t=>0;  /* one pool: every team in the top 50 is compared against every other, whatever its record */
-try{const s=JSON.parse(localStorage.getItem(KEY)||'null'); if(s&&Array.isArray(s.votes)&&s.n===TEAMS.length){votes=s.votes;boost=new Set(s.boost||[]);drop=new Set(s.drop||[]);}}catch(e){}
-function save(){try{localStorage.setItem(KEY,JSON.stringify({n:TEAMS.length,votes,boost:[...boost],drop:[...drop]}));}catch(e){}}
+/* Team ids follow the rating order, which changes as ratings refresh. Saved picks therefore store team names
+   and are matched back to today's ids when the page loads. Saves made before names were stored used the
+   Nov 16 list, which LEGACY_NAMES holds. */
+const LEGACY_NAMES=["Duke", "Kansas", "Houston", "Florida", "Michigan St.", "Virginia", "Connecticut", "Arizona", "Illinois", "Gonzaga", "Nebraska", "Texas Tech", "Iowa St.", "St. John's", "UCLA", "Miami FL", "Vanderbilt", "Michigan", "Louisville", "Texas", "Alabama", "BYU", "Tennessee", "Texas A&M", "Marquette", "Missouri", "LSU", "Arkansas", "Indiana", "Ohio St.", "Xavier", "Purdue", "N.C. State", "Villanova", "Cincinnati", "USC", "Auburn", "Virginia Tech", "Baylor", "Oregon", "Utah St.", "Grand Canyon", "West Virginia", "Iowa", "Georgia", "Mississippi", "Wisconsin", "Maryland", "North Carolina", "Saint Louis", "Oklahoma St.", "Providence", "Florida St.", "SMU", "Kentucky", "Creighton", "Oklahoma", "San Diego St.", "Arizona St.", "DePaul", "VCU", "Saint Mary's", "Georgetown", "George Washington", "TCU", "Mississippi St.", "Minnesota", "Clemson", "New Mexico", "Syracuse", "Notre Dame", "Wichita St.", "High Point", "Seton Hall", "Santa Clara", "UCF", "Rutgers", "Wake Forest", "McNeese St.", "Northwestern", "Pittsburgh", "Kansas St.", "Boise St.", "South Carolina", "Akron", "Washington", "George Mason", "Nevada", "Oregon St.", "UC Santa Barbara", "Memphis", "Tulsa", "Stanford", "Butler", "Penn St.", "Colorado St.", "Murray St.", "Colorado", "UNLV", "Miami OH", "South Florida", "UNC Wilmington", "UC Irvine", "St. Bonaventure", "Boston College", "Richmond", "Wright St.", "Wyoming", "Utah", "Illinois Chicago", "Illinois St.", "Dayton", "California", "Davidson", "Texas St.", "Charlotte", "Utah Valley", "Georgia Tech", "North Texas", "Western Kentucky", "Belmont", "Pacific", "Fordham", "Saint Joseph's", "Furman", "Montana St.", "Rhode Island", "Duquesne", "UC San Diego", "Penn", "Northern Iowa", "UAB", "San Diego", "Loyola Chicago", "Stephen F. Austin", "Hawaii", "James Madison", "Charleston", "Florida Atlantic", "Harvard", "Valparaiso", "Sam Houston St.", "Towson", "Loyola Marymount", "Temple", "Western Michigan", "Middle Tennessee", "Howard", "Kennesaw St.", "Drake", "Bowling Green", "Liberty", "Seattle"];
+try{
+  const s=JSON.parse(localStorage.getItem(KEY)||'null');
+  if(s&&Array.isArray(s.votes)){
+    const old=s.names||(s.n===LEGACY_NAMES.length?LEGACY_NAMES:null);
+    if(old){
+      const idx={}; TEAMS.forEach(t=>{idx[t.name]=t.id;});
+      const m=i=>idx[old[i]], ok=a=>a.every(x=>x!==undefined);
+      votes=s.votes.map(v=>v.r?{t:0,r:v.r.map(m)}:{t:0,x:(v.x||[]).map(m)}).filter(v=>ok(v.r||v.x||[undefined]));
+      boost=new Set((s.boost||[]).map(m).filter(x=>x!==undefined));
+      drop=new Set((s.drop||[]).map(m).filter(x=>x!==undefined));
+    }
+  }
+}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify({n:TEAMS.length,names:TEAMS.map(t=>t.name),votes,boost:[...boost],drop:[...drop]}));}catch(e){}}
 
 /* head-to-head: results of games the compared teams played against each other */
 const h2h=(a,b)=>(a.g||[]).filter(x=>x.o===b).map(x=>x.m);
