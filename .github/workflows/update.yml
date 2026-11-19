@@ -3,6 +3,8 @@ on:
   schedule:
     - cron: '13 4 * * *'    # about 11 PM Eastern
     - cron: '13 12 * * *'   # about 7 AM Eastern
+    - cron: '13 16 * * *'   # about 11 AM Eastern
+    - cron: '13 20 * * *'   # about 3 PM Eastern
   workflow_dispatch:
   push:
     branches: [main]

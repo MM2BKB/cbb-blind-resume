@@ -54,6 +54,18 @@ body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
 .card:hover{border-color:var(--accent);box-shadow:0 0 0 1px var(--glow-soft),0 0 22px var(--glow-soft)}
 .btn{transition:box-shadow .2s,background .2s,color .2s,transform .1s}
 .btn:hover{box-shadow:0 0 14px var(--glow-soft)}
+/* today's games panel */
+.today{max-width:860px;margin:0 auto 32px;padding:0 16px}
+.today .card{margin:0}
+.today h2{font-size:20px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.today .day{font:500 11px var(--mono);letter-spacing:.06em;color:var(--muted);text-transform:uppercase;margin:-4px 0 8px}
+.today ul{list-style:none;margin:0;padding:0}
+.today li{padding:8px 0;border-top:1px solid var(--line);font-size:14px;line-height:1.35}
+.today li:first-child{border-top:0}
+.today .rk{font:500 11px var(--mono);color:var(--accent)}
+.today .tm{display:block;font:500 12px var(--mono);color:var(--muted);margin-top:2px}
+.today .live{color:var(--accent);font-weight:700}
+@media (min-width:1280px){.today{position:fixed;top:20px;left:calc(50% + 446px);width:268px;max-width:none;margin:0;padding:0;max-height:calc(100vh - 40px);overflow:auto}}
 .btn:active{transform:scale(.97)}
 .h2h{margin-top:0;margin-bottom:12px}.h2h ul{margin:0;padding-left:20px}.h2h li{margin:2px 0}
 .btn.pick{box-shadow:0 0 12px var(--glow),0 0 28px var(--glow-soft)}
@@ -173,6 +185,7 @@ tr.tiers td{font:500 11px var(--mono);letter-spacing:.08em;text-transform:upperc
   <section id="view-lens" hidden></section>
   <section id="view-about" hidden></section>
 </div>
+<aside id="today" class="today"></aside>
 
 <script>
 /* ---------- DATA ----------
@@ -507,6 +520,7 @@ document.addEventListener('click',e=>{
   else if(t.dataset.act==='boost')toggleBoost(+t.dataset.id);
   else if(t.dataset.act==='drop')dismiss(+t.dataset.id);
   else if(t.dataset.act==='restore')restore(+t.dataset.id);
+  else if(t.dataset.act==='todaytoggle'){todayHidden=!todayHidden; try{localStorage.setItem(TKEY,todayHidden?'1':'0');}catch(e){} renderToday();}
   else if(t.dataset.act==='loadg'){const v=$('gdata').value; userGames=v; applyGames(SEED_GAMES+'\n'+v); rebuild(); try{localStorage.setItem(GKEY,v);}catch(e){} $('gstat').textContent=gStatus;}
   else if(t.dataset.act==='loadx'){const v=$('xdata').value; if(applyExtra(v)){try{localStorage.setItem(XKEY,v);}catch(e){}} $('xstat').textContent=xStatus;}
 });
@@ -515,7 +529,43 @@ document.addEventListener('keydown',e=>{
   if(e.key==='1')pick(0); else if(e.key==='2')pick(1); else if(e.key==='3')pick(2);
 });
 
+
+/* Games today involving a top-50 team (schedule comes from the ESPN scoreboard on each update) */
+const SCHEDULE={{SCHEDULE}};
+const TKEY='cbb-blind-resume-today-hidden';
+let todayHidden=false; try{todayHidden=localStorage.getItem(TKEY)==='1';}catch(e){}
+const etDay=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York'}).format(new Date());
+function renderToday(){
+  const el=$('today'); if(!el)return;
+  const day=etDay(), byName={}; TEAMS.forEach(t=>{byName[t.name]=t;});
+  const all=(SCHEDULE.games||[]), have=all.some(g=>g.date===day);
+  const rkOf=t=>t?t.rk:999;
+  const games=all.filter(g=>g.date===day).map(g=>({g,h:byName[g.home],a:byName[g.away]}))
+    .filter(x=>rkOf(x.h)<=POOL_MAX||rkOf(x.a)<=POOL_MAX)
+    .sort((x,y)=>(x.g.start||'').localeCompare(y.g.start||'')||(Math.min(rkOf(x.h),rkOf(x.a))-Math.min(rkOf(y.h),rkOf(y.a))));
+  const nm=(t,n)=>t&&t.rk<=POOL_MAX?`<b>${n}</b> <span class="rk">#${t.rk}</span>`:n;
+  const dl=new Date(day+'T12:00:00').toLocaleDateString([], {weekday:'long',month:'long',day:'numeric'});
+  let h=`<div class="card"><h2>Playing today <button class="mini" data-act="todaytoggle">${todayHidden?'Show':'Hide'}</button></h2>`;
+  if(todayHidden){h+='<p class="hint">Hidden, so the names do not give anything away while you rank.</p></div>';el.innerHTML=h;return;}
+  h+=`<div class="day">${dl} · Torvik top ${POOL_MAX}</div>`;
+  if(!have)h+='<p class="hint">Today\'s schedule has not loaded yet. It refreshes with each site update.</p>';
+  else if(!games.length)h+='<p class="hint">No top-50 teams play today.</p>';
+  else{
+    h+='<ul>'+games.map(({g,h:ht,a})=>{
+      const joiner=g.neutral?'vs':'at';
+      let st='';
+      if(g.state==='post')st='Final · '+(g.as!=null?g.as:'')+'–'+(g.hs!=null?g.hs:'');
+      else if(g.state==='in')st='<span class="live">LIVE</span> '+(g.detail||'');
+      else{try{st=new Date(g.start).toLocaleTimeString([], {hour:'numeric',minute:'2-digit',timeZoneName:'short'});}catch(e){st=g.detail||'';}}
+      return `<li>${nm(a,g.away)} ${joiner} ${nm(ht,g.home)}<span class="tm">${st}</span></li>`;
+    }).join('')+'</ul>';
+  }
+  h+='</div>'; el.innerHTML=h;
+}
+setInterval(renderToday,600000);
+
 rebuild(); nextTriple(); render();
+renderToday();
 </script>
 </body>
 </html>

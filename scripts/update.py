@@ -163,6 +163,48 @@ def parse_day(payload, mapper):
         games.append([names[0][0], names[1][0], str(sc[0]), str(sc[1]), str(ev.get("id"))])
     return games
 
+
+SCHEDULE_JSON = os.path.join(DATA, "schedule.json")
+
+def parse_schedule(payload, mapper, day):
+    """Every game on one day's scoreboard (any status) that involves a team in the ratings list."""
+    out = []
+    for ev in payload.get("events", []):
+        comp = (ev.get("competitions") or [{}])[0]
+        cs = comp.get("competitors") or []
+        if len(cs) != 2:
+            continue
+        cs = sorted(cs, key=lambda c: 0 if c.get("homeAway") == "home" else 1)
+        names = []
+        for c in cs:
+            t = c.get("team", {})
+            names.append(mapper(t.get("location") or t.get("displayName") or ""))
+        if not any(ok for _, ok in names):
+            continue
+        st = (comp.get("status") or ev.get("status") or {}).get("type", {})
+        state = st.get("state") or ("post" if st.get("completed") else "pre")
+        scores = []
+        for c in cs:
+            try:
+                scores.append(int(float(c.get("score"))))
+            except (TypeError, ValueError):
+                scores.append(None)
+        out.append({"date": day, "start": ev.get("date") or comp.get("date") or "", "home": names[0][0], "away": names[1][0],
+                    "neutral": bool(comp.get("neutralSite")), "state": state, "hs": scores[0], "as": scores[1],
+                    "detail": st.get("shortDetail") or "", "id": str(ev.get("id"))})
+    return out
+
+def fetch_schedule(mapper, today):
+    games = []
+    for k in (0, 1):
+        day = today + dt.timedelta(days=k)
+        try:
+            games += parse_schedule(json.loads(http_get(ESPN_URL.format(d=day.strftime("%Y%m%d")))), mapper, day.isoformat())
+        except Exception as e:
+            log("Schedule fetch failed for", day, ":", e)
+            return None
+    return games
+
 def read_games():
     if not os.path.exists(GAMES_CSV):
         return []
@@ -205,6 +247,11 @@ def main():
     # a hand-added game (id starting with "manual") is dropped once ESPN supplies the same matchup
     real = {(g[0], frozenset((g[1], g[2]))) for g in games.values() if not g[5].startswith("manual")}
     games = {k: g for k, g in games.items() if not (g[5].startswith("manual") and (g[0], frozenset((g[1], g[2]))) in real)}
+    sched = fetch_schedule(mapper, today)
+    if sched is not None:
+        with open(SCHEDULE_JSON, "w") as f:
+            json.dump({"generated": dt.datetime.now(dt.timezone.utc).isoformat(timespec="minutes"), "games": sched}, f)
+        log("Schedule saved:", len(sched), "games on", today.isoformat(), "and the next day")
     rows = sorted(games.values(), key=lambda g: (g[0], g[5]))
     if not got_any:
         rows = undated + rows      # keep the starter data until real results arrive
