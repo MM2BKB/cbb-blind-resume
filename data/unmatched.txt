@@ -1,8 +1,13 @@
+Averett
+Berea
+Bloomfield
+Central Baptist
 Cheyney (PA)
 College of Biblical Studies
 Columbia (SC)
 Defiance
 Embry Riddle (AZ)
+Eureka
 Fort Lauderdale
 Life University
 Lindsey Wilson
@@ -10,14 +15,25 @@ Louisiana Christian
 MCLA
 Maine Augusta
 Malone
+Mary Baldwin
+Mayville State
 McMurry
+Neumann
 Newman
+North Park
+Northwest Indian
 Pacific Union
+Paine
 SUNY Potsdam
 Simon Fraser
 Spring Hill
 St. Joseph's Brooklyn
+TBD
+Tusculum
 Union Commonwealth (KY)
 Utica
 Vermont State Lyndon
+WVU Tech
+West Coast Baptist
 Wilson
+Worcester State
