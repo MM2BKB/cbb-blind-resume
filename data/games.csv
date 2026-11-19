@@ -7,7 +7,7 @@ date,team,opp,ts,os,id
 2026-11-02,Mississippi St.,Tennessee Tech,106,88,401906791
 2026-11-02,Oklahoma,East Texas A&M,64,68,401906801
 2026-11-02,Texas,Chicago St.,109,59,401906863
-2026-11-02,Creighton,Kansas City,76,61,401909490
+2026-11-02,Creighton,UMKC,76,61,401909490
 2026-11-02,DePaul,West Georgia,75,58,401909500
 2026-11-02,Marquette,Mercyhurst,78,43,401909522
 2026-11-02,Providence,Maine,83,56,401909531
@@ -46,11 +46,11 @@ date,team,opp,ts,os,id
 2026-11-02,Grand Canyon,Texas Southern,103,79,401911389
 2026-11-02,Connecticut,Gardner Webb,86,46,401911390
 2026-11-02,Nevada,Robert Morris,86,49,401911452
-2026-11-02,San José State,UTSA,95,74,401911469
+2026-11-02,San Jose St.,UTSA,95,74,401911469
 2026-11-02,UC Davis,North Alabama,75,79,401911517
 2026-11-02,Northern Kentucky,UTEP,84,76,401911532
 2026-11-02,Tennessee St.,Murray St.,64,94,401911707
-2026-11-02,Cincinnati,American University,79,53,401912207
+2026-11-02,Cincinnati,American,79,53,401912207
 2026-11-02,North Carolina,Western Carolina,80,72,401913099
 2026-11-02,Illinois,Fairleigh Dickinson,120,45,401913525
 2026-11-02,Indiana,Eastern Illinois,91,57,401916286
@@ -71,13 +71,13 @@ date,team,opp,ts,os,id
 2026-11-02,Louisville,Chattanooga,84,70,401918947
 2026-11-02,N.C. State,Campbell,83,64,401918955
 2026-11-02,SMU,Southern,85,72,401918967
-2026-11-02,East Carolina,South Carolina Upstate,83,70,401918976
+2026-11-02,East Carolina,USC Upstate,83,70,401918976
 2026-11-02,Tulane,Tennessee Martin,100,98,401919001
-2026-11-02,McNeese,UAB,99,78,401919014
+2026-11-02,McNeese St.,UAB,99,78,401919014
 2026-11-02,Oklahoma St.,Incarnate Word,91,60,401919039
 2026-11-02,TCU,Lindenwood,98,59,401919047
 2026-11-02,Nebraska,Le Moyne,106,64,401919780
-2026-11-02,Florida Atlantic,Long Island University,74,60,401919803
+2026-11-02,Florida Atlantic,LIU,74,60,401919803
 2026-11-02,Stonehill,Curry,84,56,401919845
 2026-11-02,George Mason,UMBC,82,54,401920071
 2026-11-02,Cal Poly,Cal State San Marcos,78,62,401920122
@@ -100,7 +100,7 @@ date,team,opp,ts,os,id
 2026-11-02,Seton Hall,Saint Peter's,66,42,401920886
 2026-11-02,Wisconsin,Denver,75,68,401920893
 2026-11-02,Delaware,Notre Dame (MD),105,44,401920902
-2026-11-02,Grambling,Northern Illinois,89,87,401920912
+2026-11-02,Grambling St.,Northern Illinois,89,87,401920912
 2026-11-02,Southern Illinois,Maryville (MO),82,40,401920951
 2026-11-02,Western Kentucky,Morehead St.,83,58,401920959
 2026-11-02,Texas Tech,Jackson St.,76,42,401921036
@@ -111,7 +111,7 @@ date,team,opp,ts,os,id
 2026-11-02,IU Indy,Miami (OH) Middletown,113,76,401921173
 2026-11-02,Georgetown,Loyola MD,80,58,401921264
 2026-11-02,Appalachian St.,Merrimack,63,49,401921422
-2026-11-02,Queens University,Winthrop,103,98,401921423
+2026-11-02,Queens,Winthrop,103,98,401921423
 2026-11-02,Bethune Cookman,Furman,70,79,401921424
 2026-11-02,Utah,Long Beach St.,66,63,401921697
 2026-11-02,Gonzaga,Purdue,78,72,401921704
@@ -196,7 +196,7 @@ date,team,opp,ts,os,id
 2026-11-03,North Carolina A&T,Warren Wilson,92,53,401921153
 2026-11-03,Missouri,Cleveland St.,111,50,401921165
 2026-11-03,Kentucky,Manhattan,85,57,401921801
-2026-11-03,LSU,LSU New Orleans,100,57,401921808
+2026-11-03,LSU,New Orleans,100,57,401921808
 2026-11-03,South Carolina,Stetson,81,55,401921819
 2026-11-03,UNLV,Northern Arizona,89,77,401924911
 2026-11-03,Wyoming,Regis University,95,48,401924920
@@ -212,14 +212,14 @@ date,team,opp,ts,os,id
 2026-11-04,Butler,Fairleigh Dickinson,99,65,401902276
 2026-11-04,Saint Mary's,North Dakota St.,105,64,401917512
 2026-11-04,Santa Clara,Milwaukee,95,72,401917513
-2026-11-04,Loyola Marymount,Queens University,95,96,401917514
+2026-11-04,Loyola Marymount,Queens,95,96,401917514
 2026-11-04,Louisiana Monroe,Champion Christian,99,55,401917977
 2026-11-04,California,Radford,84,70,401918052
 2026-11-04,Wichita St.,Cal St. Northridge,79,67,401919028
 2026-11-04,Saint Joseph's,Longwood,82,73,401920191
 2026-11-04,Dartmouth,Framingham State,107,50,401920232
 2026-11-04,High Point,Maryland Eastern Shore,63,49,401920410
-2026-11-04,Auburn,SE Louisiana,92,59,401920798
+2026-11-04,Auburn,Southeastern Louisiana,92,59,401920798
 2026-11-04,Montana,Salish Kootenai,105,40,401922030
 2026-11-04,UNC Asheville,Erskine,101,74,401922290
 2026-11-04,Southern Indiana,Saint Mary of the Woods,112,42,401923391
@@ -258,7 +258,7 @@ date,team,opp,ts,os,id
 2026-11-05,SMU,VMI,95,70,401918968
 2026-11-05,Tulane,Jackson St.,85,87,401919002
 2026-11-05,Incarnate Word,Chicago St.,54,66,401919732
-2026-11-05,Seton Hall,Long Island University,67,60,401919804
+2026-11-05,Seton Hall,LIU,67,60,401919804
 2026-11-05,Notre Dame,Mercyhurst,83,56,401919823
 2026-11-05,Cal St. Bakersfield,Stanton,93,54,401920133
 2026-11-05,Virginia Tech,Mercer,96,67,401920377
@@ -272,7 +272,7 @@ date,team,opp,ts,os,id
 2026-11-05,Rice,East Texas A&M,71,72,401921094
 2026-11-05,Texas Tech,Bethune Cookman,76,58,401921133
 2026-11-05,Navy,Delaware St.,66,60,401921219
-2026-11-05,Manhattan,UAlbany,68,72,401921678
+2026-11-05,Manhattan,Albany,68,72,401921678
 2026-11-05,Merrimack,UMass Lowell,61,71,401921679
 2026-11-05,Quinnipiac,Bryant,66,56,401921680
 2026-11-05,Rider,New Hampshire,55,66,401921681
@@ -283,7 +283,7 @@ date,team,opp,ts,os,id
 2026-11-05,Lehigh,Cornell,71,64,401924718
 2026-11-05,Princeton,Hofstra,60,58,401924733
 2026-11-05,Lafayette,King's,104,67,401924948
-2026-11-05,North Texas,McNeese,77,67,401925031
+2026-11-05,North Texas,McNeese St.,77,67,401925031
 2026-11-05,Alcorn St.,Howard,83,94,401925684
 2026-11-05,Michigan St.,Toledo,91,61,401925754
 2026-11-05,Charlotte,Georgia St.,77,67,401925819
@@ -315,7 +315,7 @@ date,team,opp,ts,os,id
 2026-11-06,Central Michigan,Alma,93,50,401911006
 2026-11-06,Missouri,Saint Louis,84,90,401911249
 2026-11-06,Brown,Boston University,67,72,401911305
-2026-11-06,Clemson,American University,82,73,401912208
+2026-11-06,Clemson,American,82,73,401912208
 2026-11-06,North Carolina,Wofford,109,70,401913100
 2026-11-06,Minnesota,St. Thomas,76,62,401916304
 2026-11-06,Ohio St.,Youngstown St.,89,65,401916314
@@ -324,8 +324,8 @@ date,team,opp,ts,os,id
 2026-11-06,Mississippi,Central Arkansas,92,60,401917914
 2026-11-06,Kennesaw St.,Austin Peay,71,69,401917949
 2026-11-06,N.C. State,East Tennessee St.,77,63,401918956
-2026-11-06,UAB,Nicholls,70,63,401919015
-2026-11-06,Oklahoma St.,Queens University,118,68,401919040
+2026-11-06,UAB,Nicholls St.,70,63,401919015
+2026-11-06,Oklahoma St.,Queens,118,68,401919040
 2026-11-06,TCU,Southern,106,54,401919048
 2026-11-06,George Mason,Coppin St.,68,51,401920072
 2026-11-06,Georgia Tech,Georgia Southern,95,83,401920305
@@ -338,7 +338,7 @@ date,team,opp,ts,os,id
 2026-11-06,Texas A&M,Northern Kentucky,104,67,401920807
 2026-11-06,Wisconsin,Delaware,73,64,401920894
 2026-11-06,Mount St. Mary's,Loyola MD,68,57,401920920
-2026-11-06,Kansas City,Southern Illinois,100,93,401920952
+2026-11-06,UMKC,Southern Illinois,100,93,401920952
 2026-11-06,San Francisco,North Dakota St.,79,70,401921061
 2026-11-06,Elon,UNC Greensboro,74,65,401921140
 2026-11-06,Cleveland St.,Michigan Dearborn,103,79,401921166
@@ -346,13 +346,13 @@ date,team,opp,ts,os,id
 2026-11-06,Miami FL,Wagner,83,57,401921719
 2026-11-06,Stanford,Oakland,81,63,401921727
 2026-11-06,Arizona St.,Northern Colorado,90,63,401921732
-2026-11-06,BYU,Omaha,108,67,401921739
+2026-11-06,BYU,Nebraska Omaha,108,67,401921739
 2026-11-06,UCF,Yale,87,75,401921754
 2026-11-06,West Virginia,Stetson,91,53,401921767
 2026-11-06,Kentucky,James Madison,89,80,401921802
 2026-11-06,LSU,Texas Southern,92,51,401921809
 2026-11-06,Wyoming,Idaho St.,93,62,401922021
-2026-11-06,South Carolina Upstate,South Carolina St.,70,78,401922059
+2026-11-06,USC Upstate,South Carolina St.,70,78,401922059
 2026-11-06,Florida Gulf Coast,New College,89,67,401922210
 2026-11-06,UCLA,North Florida,114,63,401922219
 2026-11-06,FIU,West Florida,85,75,401922248
@@ -379,7 +379,7 @@ date,team,opp,ts,os,id
 2026-11-07,Dayton,Northern Illinois,76,81,401911186
 2026-11-07,Canisius,St. Bonaventure,49,88,401911262
 2026-11-07,Grand Canyon,Bethune Cookman,99,81,401911345
-2026-11-07,UC Irvine,San José State,91,79,401911470
+2026-11-07,UC Irvine,San Jose St.,91,79,401911470
 2026-11-07,Seattle,Portland St.,79,60,401917517
 2026-11-07,Bradley,Pacific,52,63,401917518
 2026-11-07,Santa Clara,Sacramento St.,83,77,401917519
@@ -388,7 +388,7 @@ date,team,opp,ts,os,id
 2026-11-07,East Carolina,UNC Wilmington,75,78,401918977
 2026-11-07,Memphis,VCU,89,88,401918986
 2026-11-07,Fairleigh Dickinson,City College NY,93,56,401919758
-2026-11-07,La Salle,Long Island University,88,80,401919805
+2026-11-07,La Salle,LIU,88,80,401919805
 2026-11-07,Mercyhurst,Penn State Shenango,89,50,401919824
 2026-11-07,Rhode Island,Monmouth,84,66,401920062
 2026-11-07,South Dakota,Cal St. Fullerton,85,87,401920156
@@ -398,7 +398,7 @@ date,team,opp,ts,os,id
 2026-11-07,Weber St.,Utah Valley,93,101,401920435
 2026-11-07,Lipscomb,SIU Edwardsville,78,77,401920703
 2026-11-07,Drexel,Colgate,77,74,401920770
-2026-11-07,Little Rock,SE Louisiana,79,83,401920816
+2026-11-07,Little Rock,Southeastern Louisiana,79,83,401920816
 2026-11-07,Marshall,Toledo,76,81,401920856
 2026-11-07,Ohio,North Carolina A&T,80,70,401921154
 2026-11-07,IU Indy,Tennessee Martin,75,74,401921174
@@ -427,7 +427,7 @@ date,team,opp,ts,os,id
 2026-11-07,Sam Houston St.,Howard Payne,102,59,401928793
 2026-11-07,Purdue Fort Wayne,Albion,103,65,401928817
 2026-11-07,Lindenwood,East West,115,44,401929039
-2026-11-07,Utah St.,Omaha,90,56,401929293
+2026-11-07,Utah St.,Nebraska Omaha,90,56,401929293
 2026-11-07,Oral Roberts,Northwestern (OK),94,39,401929399
 2026-11-07,Georgia St.,Andrew,111,61,401929449
 2026-11-07,Southern Utah,Bethesda,143,49,401931055
@@ -453,7 +453,7 @@ date,team,opp,ts,os,id
 2026-11-08,Bryant,Fairfield,59,68,401921683
 2026-11-08,Maine,Manhattan,62,68,401921684
 2026-11-08,New Hampshire,Sacred Heart,76,81,401921685
-2026-11-08,UAlbany,Merrimack,60,73,401921686
+2026-11-08,Albany,Merrimack,60,73,401921686
 2026-11-08,UMass Lowell,Marist,63,61,401921687
 2026-11-08,South Carolina,Southeast Missouri St.,78,68,401921820
 2026-11-08,Idaho,Lincoln (CA),108,69,401922262
@@ -473,7 +473,7 @@ date,team,opp,ts,os,id
 2026-11-09,Mississippi St.,Jackson St.,98,57,401906793
 2026-11-09,Oklahoma,North Alabama,81,72,401906803
 2026-11-09,Tennessee,Radford,70,47,401906849
-2026-11-09,Texas,Grambling,93,62,401906865
+2026-11-09,Texas,Grambling St.,93,62,401906865
 2026-11-09,DePaul,Alabama A&M,84,47,401909502
 2026-11-09,Indiana,Syracuse,83,80,401909718
 2026-11-09,Ball St.,Brescia,89,64,401911008
@@ -486,7 +486,7 @@ date,team,opp,ts,os,id
 2026-11-09,UAB,Florida A&M,92,64,401919016
 2026-11-09,Chicago St.,South Carolina St.,67,82,401919733
 2026-11-09,Le Moyne,Elmira,109,39,401919781
-2026-11-09,Towson,Long Island University,66,46,401919806
+2026-11-09,Towson,LIU,66,46,401919806
 2026-11-09,Columbia,Stonehill,75,55,401919846
 2026-11-09,Canisius,Hiram,117,60,401920279
 2026-11-09,Connecticut,Wagner,83,41,401920686
@@ -494,7 +494,7 @@ date,team,opp,ts,os,id
 2026-11-09,Northwestern,Boston University,72,55,401920734
 2026-11-09,Tennessee St.,Fisk,123,73,401920766
 2026-11-09,Auburn,Appalachian St.,75,53,401920799
-2026-11-09,Jacksonville,Kansas City,79,61,401920877
+2026-11-09,Jacksonville,UMKC,79,61,401920877
 2026-11-09,Charlotte,Seton Hall,62,68,401920887
 2026-11-09,Chattanooga,Covenant,97,67,401920972
 2026-11-09,UMBC,McDaniel,91,61,401921085
@@ -504,7 +504,7 @@ date,team,opp,ts,os,id
 2026-11-09,Miami FL,North Florida,89,51,401921720
 2026-11-09,LSU,Louisiana Tech,90,50,401921810
 2026-11-09,Missouri,SIU Edwardsville,96,58,401921815
-2026-11-09,Coastal Carolina,South Carolina Upstate,65,56,401922060
+2026-11-09,Coastal Carolina,USC Upstate,65,56,401922060
 2026-11-09,West Florida,Baptist (Fl),110,59,401922249
 2026-11-09,Coppin St.,Cheyney (PA),90,53,401925630
 2026-11-09,Alabama St.,Georgia Gwinnett,77,79,401925662
@@ -545,21 +545,21 @@ date,team,opp,ts,os,id
 2026-11-10,N.C. State,Presbyterian,94,60,401918957
 2026-11-10,SMU,Prairie View A&M,98,63,401918969
 2026-11-10,Vanderbilt,Memphis,105,81,401918987
-2026-11-10,Tulane,Nicholls,77,63,401919003
+2026-11-10,Tulane,Nicholls St.,77,63,401919003
 2026-11-10,Rhode Island,Maine,71,65,401920063
 2026-11-10,Georgia Tech,Eastern Kentucky,85,71,401920306
 2026-11-10,Northeastern,Harvard,74,70,401920356
 2026-11-10,Iowa,Virginia Tech,88,93,401920378
 2026-11-10,Virginia,Bucknell,95,61,401920425
 2026-11-10,Lipscomb,Belmont,88,75,401920704
-2026-11-10,Mississippi,SE Louisiana,91,51,401920817
+2026-11-10,Mississippi,Southeastern Louisiana,91,51,401920817
 2026-11-10,Rutgers,NJIT,101,64,401920866
 2026-11-10,Wisconsin,Fairfield,89,42,401920895
 2026-11-10,Georgia Southern,Mercer,91,97,401921025
 2026-11-10,San Francisco,Montana,63,58,401921062
 2026-11-10,Utah,Weber St.,85,64,401921699
 2026-11-10,Arizona St.,Hofstra,85,63,401921733
-2026-11-10,BYU,Queens University,98,82,401921740
+2026-11-10,BYU,Queens,98,82,401921740
 2026-11-10,UCF,South Alabama,76,69,401921755
 2026-11-10,Villanova,La Salle,80,59,401921774
 2026-11-10,Longwood,St. Mary's (MD),101,45,401922045
@@ -594,7 +594,7 @@ date,team,opp,ts,os,id
 2026-11-11,Gardner Webb,Erskine,88,66,401911391
 2026-11-11,UC Santa Barbara,Nevada,76,63,401911454
 2026-11-11,UC Davis,Incarnate Word,81,69,401911519
-2026-11-11,Drexel,American University,64,66,401912209
+2026-11-11,Drexel,American,64,66,401912209
 2026-11-11,Seattle,UTSA,59,86,401917521
 2026-11-11,North Texas,Santa Clara,71,76,401917522
 2026-11-11,Long Beach St.,Pacific,62,59,401917523
@@ -608,14 +608,14 @@ date,team,opp,ts,os,id
 2026-11-11,Cal Baptist,Chicago St.,62,81,401919734
 2026-11-11,East Texas A&M,Fairleigh Dickinson,76,80,401919759
 2026-11-11,VCU,NJIT,87,49,401920202
-2026-11-11,UAlbany,Dartmouth,76,85,401920234
+2026-11-11,Albany,Dartmouth,76,85,401920234
 2026-11-11,St. John's,Colgate,90,59,401920680
 2026-11-11,East Tennessee St.,Campbell,68,53,401920740
 2026-11-11,St. Thomas,Macalester,119,82,401920844
 2026-11-11,Delaware,James Madison,61,71,401920903
 2026-11-11,Northern Illinois,Clarke,82,43,401920914
 2026-11-11,Eastern Michigan,Great Lakes Christian,108,44,401920946
-2026-11-11,Florida A&M,Kansas City,65,87,401921005
+2026-11-11,Florida A&M,UMKC,65,87,401921005
 2026-11-11,Southern Miss,Jackson St.,84,80,401921037
 2026-11-11,Bellarmine,Franklin,99,82,401921105
 2026-11-11,IU Indy,Southern Indiana,74,70,401921175
@@ -654,7 +654,7 @@ date,team,opp,ts,os,id
 2026-11-12,Bowling Green,Niagara,88,76,401911013
 2026-11-12,Southern Illinois,Richmond,80,70,401911239
 2026-11-12,Brown,Canisius,81,86,401911307
-2026-11-12,San José State,UC Riverside,75,80,401911471
+2026-11-12,San Jose St.,UC Riverside,75,80,401911471
 2026-11-12,UTEP,New Mexico St.,60,58,401911533
 2026-11-12,Indiana,Tennessee Tech,90,66,401916288
 2026-11-12,Minnesota,Southern,91,61,401916306
@@ -662,7 +662,7 @@ date,team,opp,ts,os,id
 2026-11-12,South Alabama,Loyola Marymount,79,72,401917524
 2026-11-12,Texas A&M,Oklahoma St.,88,69,401919041
 2026-11-12,Rhode Island,Maryland Eastern Shore,67,47,401920064
-2026-11-12,George Mason,Kansas City,76,68,401920073
+2026-11-12,George Mason,UMKC,76,68,401920073
 2026-11-12,Western Illinois,Cal St. Bakersfield,83,91,401920135
 2026-11-12,Cal St. Fullerton,Lincoln (CA),101,71,401920157
 2026-11-12,Cal St. Northridge,Grace (CA),108,69,401920296
@@ -693,7 +693,7 @@ date,team,opp,ts,os,id
 2026-11-13,Florida St.,Texas A&M Corpus Chris,84,60,401909696
 2026-11-13,Auburn,Arizona,69,80,401909741
 2026-11-13,SMU,Ball St.,90,65,401911014
-2026-11-13,Fordham,Long Island University,80,58,401911197
+2026-11-13,Fordham,LIU,80,58,401911197
 2026-11-13,George Washington,Harvard,85,57,401911210
 2026-11-13,Illinois,Sam Houston St.,108,86,401913528
 2026-11-13,Maryland,Virginia,83,87,401916297
@@ -738,7 +738,7 @@ date,team,opp,ts,os,id
 2026-11-13,North Dakota St.,Illinois St.,82,81,401927374
 2026-11-13,Murray St.,Texas Southern,99,78,401927380
 2026-11-13,Green Bay,Viterbo,66,46,401928807
-2026-11-13,Omaha,Lindenwood,67,56,401929040
+2026-11-13,Nebraska Omaha,Lindenwood,67,56,401929040
 2026-11-13,Texas St.,Southern Miss,85,65,401929199
 2026-11-13,Eastern Kentucky,Kentucky State,106,59,401929386
 2026-11-14,Providence,Colorado,67,53,401909534
@@ -772,7 +772,7 @@ date,team,opp,ts,os,id
 2026-11-14,Towson,UMBC,68,42,401920568
 2026-11-14,Vermont,Plattsburgh,104,59,401920693
 2026-11-14,Western Carolina,Lipscomb,68,75,401920705
-2026-11-14,Campbell,South Carolina Upstate,93,77,401920741
+2026-11-14,Campbell,USC Upstate,93,77,401920741
 2026-11-14,Youngstown St.,Marshall,74,71,401920750
 2026-11-14,Belmont,Furman,72,62,401920760
 2026-11-14,Fairfield,NJIT,63,60,401920867
@@ -789,11 +789,11 @@ date,team,opp,ts,os,id
 2026-11-14,Old Dominion,Longwood,80,74,401922046
 2026-11-14,Radford,Shenandoah,102,63,401922054
 2026-11-14,North Florida,The Citadel,74,77,401922220
-2026-11-14,Queens University,Wofford,97,92,401922230
+2026-11-14,Queens,Wofford,97,92,401922230
 2026-11-14,Florida Atlantic,Coastal Georgia,78,63,401923261
 2026-11-14,Maine,Drexel,64,66,401923303
 2026-11-14,Denver,Wyoming,53,76,401924921
-2026-11-14,Nicholls,Louisiana Tech,71,68,401925063
+2026-11-14,Nicholls St.,Louisiana Tech,71,68,401925063
 2026-11-14,Little Rock,Northwestern St.,84,83,401925079
 2026-11-14,UT Arlington,UT Rio Grande Valley,85,77,401925108
 2026-11-14,Davidson,Howard,58,64,401925774
@@ -815,8 +815,8 @@ date,team,opp,ts,os,id
 2026-11-15,Iowa St.,Niagara,66,45,401909774
 2026-11-15,Buffalo,Canisius,79,55,401911017
 2026-11-15,Saint Louis,High Point,58,68,401911251
-2026-11-15,San José State,Alabama St.,80,68,401911472
-2026-11-15,American University,Harvard,70,64,401912210
+2026-11-15,San Jose St.,Alabama St.,80,68,401911472
+2026-11-15,American,Harvard,70,64,401912210
 2026-11-15,Penn St.,New Haven,86,52,401917175
 2026-11-15,Seattle,Idaho St.,77,70,401917528
 2026-11-15,Loyola Marymount,Chicago St.,86,49,401917531
@@ -831,7 +831,7 @@ date,team,opp,ts,os,id
 2026-11-15,Delaware,Colgate,64,58,401920771
 2026-11-15,Wisconsin,Coastal Carolina,89,81,401920896
 2026-11-15,Alabama A&M,Cleveland St.,73,74,401921168
-2026-11-15,Holy Cross,UAlbany,60,62,401921287
+2026-11-15,Holy Cross,Albany,60,62,401921287
 2026-11-15,Southern Indiana,Western Michigan,59,80,401923393
 2026-11-15,Yale,Emmanuel (MA),103,58,401924744
 2026-11-15,Central Connecticut,Quinnipiac,72,67,401924858
@@ -863,14 +863,14 @@ date,team,opp,ts,os,id
 2026-11-16,Missouri St.,Abilene Christian,73,64,401917964
 2026-11-16,Louisiana Monroe,Dallas Christian,118,81,401917981
 2026-11-16,Clemson,The Citadel,87,51,401918075
-2026-11-16,Long Island University,St. Thomas,70,79,401919807
+2026-11-16,LIU,St. Thomas,70,79,401919807
 2026-11-16,UC San Diego,Texas Southern,97,92,401920373
 2026-11-16,Northwestern,Columbia,53,75,401920735
-2026-11-16,Texas A&M,SE Louisiana,101,69,401920808
+2026-11-16,Texas A&M,Southeastern Louisiana,101,69,401920808
 2026-11-16,Morehead St.,Miami (OH) Hamilton,104,69,401920962
 2026-11-16,UMBC,Iona,75,67,401921087
 2026-11-16,Penn,DeSales,75,53,401921182
-2026-11-16,Kentucky,Grambling,88,59,401921804
+2026-11-16,Kentucky,Grambling St.,88,59,401921804
 2026-11-16,Stetson,Florida Memorial,91,56,401922240
 2026-11-16,UCLA,Long Beach St.,105,66,401924265
 2026-11-16,Tulsa,Western Kentucky,67,64,401925864
@@ -935,8 +935,8 @@ date,team,opp,ts,os,id
 2026-11-17,UMass Lowell,Saint Peter's,66,51,401923325
 2026-11-17,Wyoming,Sam Houston St.,81,79,401924922
 2026-11-17,Bucknell,Akron,53,49,401924941
-2026-11-17,Omaha,Lamar,74,104,401925012
-2026-11-17,Mississippi,Nicholls,76,41,401925064
+2026-11-17,Nebraska Omaha,Lamar,74,104,401925012
+2026-11-17,Mississippi,Nicholls St.,76,41,401925064
 2026-11-17,Central Connecticut,Vermont State Lyndon,98,55,401925751
 2026-11-17,Davidson,Charlotte,66,73,401925775
 2026-11-17,Gonzaga,Montana St.,74,62,401925879
@@ -965,7 +965,7 @@ date,team,opp,ts,os,id
 2026-11-18,Charleston Southern,Wofford,77,79,401911377
 2026-11-18,Gardner Webb,UNC Greensboro,72,78,401911393
 2026-11-18,Nevada,Idaho,91,74,401911456
-2026-11-18,San José State,Fresno St.,92,86,401911473
+2026-11-18,San Jose St.,Fresno St.,92,86,401911473
 2026-11-18,Penn St.,IU Indy,81,74,401917181
 2026-11-18,San Diego,UC Riverside,71,62,401917535
 2026-11-18,West Georgia,Columbia (SC),85,50,401917902
@@ -973,7 +973,7 @@ date,team,opp,ts,os,id
 2026-11-18,LSU,Louisiana Monroe,79,67,401917982
 2026-11-18,Illinois Chicago,Chicago St.,60,52,401919735
 2026-11-18,Fairleigh Dickinson,NJIT,78,66,401919760
-2026-11-18,Long Island University,UNC Wilmington,115,114,401919808
+2026-11-18,LIU,UNC Wilmington,115,114,401919808
 2026-11-18,Stonehill,New Hampshire,70,90,401919848
 2026-11-18,George Mason,North Carolina Central,83,60,401920075
 2026-11-18,UCLA,Cal St. Fullerton,75,71,401920158
@@ -990,7 +990,7 @@ date,team,opp,ts,os,id
 2026-11-18,Ohio,Morehead St.,91,77,401920963
 2026-11-18,Winthrop,Chattanooga,79,90,401920974
 2026-11-18,San Francisco,Louisiana,77,56,401921064
-2026-11-18,Texas Tech,LSU New Orleans,86,41,401921134
+2026-11-18,Texas Tech,New Orleans,86,41,401921134
 2026-11-18,South Carolina,Elon,80,72,401921141
 2026-11-18,North Carolina A&T,Morgan St.,82,70,401921156
 2026-11-18,Arizona St.,Oakland,68,65,401921734
@@ -999,7 +999,7 @@ date,team,opp,ts,os,id
 2026-11-18,Longwood,VMI,82,76,401922047
 2026-11-18,Radford,Furman,71,78,401922055
 2026-11-18,Florida Atlantic,Florida Gulf Coast,86,76,401922212
-2026-11-18,South Carolina Upstate,Samford,64,74,401922283
+2026-11-18,USC Upstate,Samford,64,74,401922283
 2026-11-18,UNC Asheville,Tennessee Tech,77,98,401922292
 2026-11-18,Southern Indiana,Lindsey Wilson,87,81,401923394
 2026-11-18,Merrimack,Boston University,60,65,401923401

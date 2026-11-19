@@ -23,6 +23,19 @@ UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chr
 
 # ESPN school name (lowercase) -> Torvik name, for schools whose names differ
 ALIAS = {
+    "lsu new orleans": "New Orleans",
+    "american university": "American",
+    "grambling": "Grambling St.",
+    "kansas city": "UMKC",
+    "long island university": "LIU",
+    "mcneese": "McNeese St.",
+    "nicholls": "Nicholls St.",
+    "omaha": "Nebraska Omaha",
+    "queens university": "Queens",
+    "se louisiana": "Southeastern Louisiana",
+    "san josé state": "San Jose St.",
+    "south carolina upstate": "USC Upstate",
+    "ualbany": "Albany",
     "uconn": "Connecticut", "miami": "Miami FL", "ole miss": "Mississippi", "uic": "Illinois Chicago",
     "pennsylvania": "Penn", "sam houston": "Sam Houston St.", "seattle u": "Seattle",
     "app state": "Appalachian St.", "loyola maryland": "Loyola MD", "umass": "Massachusetts",
