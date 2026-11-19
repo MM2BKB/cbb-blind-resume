@@ -1,17 +1,9 @@
-Calumet St. Joseph
 Cheyney (PA)
 College of Biblical Studies
-Colorado Colorado Springs
 Columbia (SC)
-Dallas Christian
-DeSales
 Defiance
 Embry Riddle (AZ)
-Ferrum
-Fisk
-Florida Memorial
 Fort Lauderdale
-Grambling
 Kansas City
 LSU New Orleans
 Life University
@@ -21,15 +13,11 @@ Louisiana Christian
 MCLA
 Maine Augusta
 Malone
-Mayville State
 McMurry
-Miami (OH) Hamilton
-Midway
 Newman
 Nicholls
 Omaha
 Pacific Union
-SE Louisiana
 SUNY Potsdam
 San José State
 Simon Fraser
@@ -39,5 +27,4 @@ St. Joseph's Brooklyn
 Union Commonwealth (KY)
 Utica
 Vermont State Lyndon
-Virginia Lynchburg
 Wilson
