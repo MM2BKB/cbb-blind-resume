@@ -5,18 +5,11 @@ Bloomfield
 Calumet St. Joseph
 Central Baptist
 Clinton
-College of Biblical Studies
-Columbia (SC)
-Defiance
 Eureka
 Justice
 Lancaster Bible
-Lindsey Wilson
-MCLA
-Malone
 Mary Baldwin
 Mayville State
-McMurry
 Menlo
 Milligan
 Neumann
@@ -25,10 +18,7 @@ Northwest Indian
 Paine
 Penn State Behrend
 Southwestern Adventist
-St. Joseph's Brooklyn
 Tusculum
-Union Commonwealth (KY)
-Utica
 Virginia Lynchburg
 WVU Tech
 West Coast Baptist
