@@ -3,11 +3,18 @@ Averett
 Berea
 Bloomfield
 Calumet St. Joseph
+Carolina University
+Carroll (MT)
 Central Baptist
 Clinton
+Dickinson State
+Ecclesia
 Eureka
+IU South Bend
 Justice
+Kentucky State
 Lancaster Bible
+Mansfield
 Mary Baldwin
 Mayville State
 Menlo
@@ -15,11 +22,17 @@ Milligan
 Neumann
 North Park
 Northwest Indian
+Notre Dame (MD)
 Paine
 Penn State Behrend
+Penn State Brandywine
+RIT
 Southwestern Adventist
+Spalding
+TBD
 Tusculum
 Virginia Lynchburg
 WVU Tech
 West Coast Baptist
+Wisconsin Stout
 Worcester State
