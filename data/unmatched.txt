@@ -1,14 +1,11 @@
 Alice Lloyd
 Arkansas Baptist
 Arlington Baptist
-Averett
-Bloomfield
 Bloomsburg
 Calumet St. Joseph
 Carolina Christian
 Carolina University
 Carroll (MT)
-Central Baptist
 Clinton
 Dickinson State
 Ecclesia
@@ -21,9 +18,7 @@ Louisiana Christian
 Mansfield
 Menlo
 Milligan
-Neumann
 Notre Dame (MD)
-Paine
 Penn State Behrend
 Penn State Berks
 Penn State Brandywine
@@ -34,7 +29,4 @@ Spalding
 TBD
 Vermont State Randolph
 Virginia Lynchburg
-WVU Tech
-West Coast Baptist
 Wisconsin Stout
-Worcester State
