@@ -1,24 +1,33 @@
 Alice Lloyd
+American International
 Arkansas Baptist
 Arlington Baptist
+Bethesda
 Bloomsburg
 Calumet St. Joseph
 Carolina Christian
 Carolina University
 Carroll (MT)
+Case Western Reserve
 Clinton
 Dickinson State
 Ecclesia
 Emerson
+Grace Christian
 IU South Bend
+Johnson & Wales
 Justice
 Kentucky State
 Lancaster Bible
 Louisiana Christian
 Mansfield
 Menlo
+Mercy
 Milligan
+Montreat
+Northwest Indian
 Notre Dame (MD)
+Penn State Abington
 Penn State Behrend
 Penn State Berks
 Penn State Brandywine
@@ -29,4 +38,5 @@ Spalding
 TBD
 Vermont State Randolph
 Virginia Lynchburg
+Warner
 Wisconsin Stout
