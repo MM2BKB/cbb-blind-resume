@@ -10,7 +10,7 @@ lines = []
 with open(p("data", "games.csv"), newline="") as f:
     for r in list(csv.reader(f))[1:]:
         if len(r) >= 6:
-            lines.append(",".join(x.replace("`", "").replace(",", " ") if i < 2 else x for i, x in enumerate(r[1:6])))
+            lines.append(",".join(x.replace("`", "").replace(",", " ") if i < 2 else x for i, x in enumerate(r[1:6] + [r[0]])))
 meta = json.load(open(p("data", "meta.json"))) if os.path.exists(p("data", "meta.json")) else {}
 sched = open(p("data", "schedule.json")).read() if os.path.exists(p("data", "schedule.json")) else '{"games":[]}'
 html = open(p("template.html")).read()
