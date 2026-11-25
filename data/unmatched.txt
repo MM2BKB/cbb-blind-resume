@@ -1,4 +1,3 @@
-Alice Lloyd
 American International
 Arkansas Baptist
 Arlington Baptist
@@ -15,12 +14,9 @@ Grace Christian
 IU South Bend
 Johnson & Wales
 Kentucky State
-Lancaster Bible
 Louisiana Christian
 Mansfield
-Menlo
 Mercy
-Milligan
 Montreat
 Northwest Indian
 Notre Dame (MD)
@@ -30,7 +26,6 @@ Penn State Brandywine
 RIT
 SUNY Fredonia
 Spalding
-TBD
 Vermont State Randolph
 Warner
 Wisconsin Stout

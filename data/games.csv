@@ -1263,15 +1263,19 @@ date,team,opp,ts,os,id
 2026-11-23,North Dakota St.,Wisconsin Stout,84,49,401929392
 2026-11-23,Arkansas St.,Southern Utah,104,102,401929445
 2026-11-23,Howard,Notre Dame (MD),101,73,401932055
+2026-11-24,Alabama,Baylor,63,68,401906762
 2026-11-24,Florida,Milwaukee,76,67,401906774
 2026-11-24,Pittsburgh,Oklahoma,79,68,401906806
 2026-11-24,Maryland,Tennessee,64,72,401906853
 2026-11-24,Michigan,Creighton,73,99,401909495
 2026-11-24,Purdue,DePaul,56,65,401909505
 2026-11-24,Florida St.,UNC Asheville,97,61,401909699
+2026-11-24,Stanford,Colorado,65,70,401909763
 2026-11-24,Iowa St.,San Diego St.,81,68,401909775
+2026-11-24,Kansas St.,Gonzaga,61,101,401909800
 2026-11-24,Notre Dame,Central Michigan,88,70,401911026
 2026-11-24,Bowling Green,Gardner Webb,91,65,401911027
+2026-11-24,Grand Canyon,Saint Louis,91,88,401911253
 2026-11-24,Lehigh,Binghamton,83,90,401911279
 2026-11-24,Air Force,Army,88,79,401911338
 2026-11-24,James Madison,Charleston Southern,82,58,401911379
@@ -1279,6 +1283,7 @@ date,team,opp,ts,os,id
 2026-11-24,Charleston,UTEP,69,80,401911535
 2026-11-24,TCU,Miami FL,84,71,401915941
 2026-11-24,Louisville,Texas Tech,72,64,401915942
+2026-11-24,St. John's,Oregon,90,79,401915943
 2026-11-24,Indiana,Jacksonville,82,64,401916291
 2026-11-24,Ohio St.,Vanderbilt,66,72,401916319
 2026-11-24,Oregon St.,San Francisco,87,73,401917676
@@ -1311,6 +1316,7 @@ date,team,opp,ts,os,id
 2026-11-24,BYU,Mississippi,63,73,401921709
 2026-11-24,Arizona,Providence,84,66,401921710
 2026-11-24,Washington,Clemson,64,63,401921711
+2026-11-24,Colorado St.,VCU,81,84,401921712
 2026-11-24,Villanova,Coppin St.,70,52,401921777
 2026-11-24,Missouri,Evansville,78,67,401921817
 2026-11-24,Boise St.,Idaho St.,88,71,401922023
