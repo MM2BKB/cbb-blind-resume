@@ -1,25 +1,19 @@
 American International
-Arkansas Baptist
-Arlington Baptist
 Auburn Montgomery
 Azusa Pacific
 Bethesda
-Bloomsburg
 Bryant & Stratton (OH)
 Cal Poly Humboldt
-Carolina Christian
 Case Western Reserve
 Clarke
 Clinton
 Dallas
-Emerson
 Grace Christian
 IU Columbus
 Johnson & Wales
 Kentucky Christian
 Lane College
 Lincoln (CA)
-Louisiana Christian
 Mercy
 Montreat
 New College
@@ -27,8 +21,6 @@ North Carolina Wesleyan
 Northwest Indian
 Paul Quinn
 Penn State Abington
-Penn State Berks
-SUNY Fredonia
 Southern Wesleyan
 Southwestern Christian U
 St. Lawrence
